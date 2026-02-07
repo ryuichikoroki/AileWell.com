@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AileWell.com | トップ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,37 +20,82 @@
                 <a href="news.html">ニュース</a>
                 <a href="recruit.html">採用情報</a>
                 <a href="access.html">アクセス</a>
-                <a href="contact.html">お問い合わせ</a>
             </nav>
+            <a href="contact.html" class="header-cta">お問い合わせ</a>
         </div>
     </header>
 
-    <main class="main">
-        <section class="hero">
+    <main>
+        <section class="hero hero-full">
             <div class="hero-banner">
-                <img class="hero-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80" alt="光ファイバー・通信インフラ" width="1200" height="400">
+                <img class="hero-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80" alt="光ファイバー・通信インフラ" width="1920" height="800">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
-                    <h2 class="hero-title">AileWell へようこそ</h2>
-                    <p class="hero-text">私たちは、お客様の「より良く」を支える通信事業です。</p>
+                    <p class="hero-lead">通信で、未来をつなぐ</p>
+                    <h2 class="hero-title">変化する世界を<br>通信インフラで支える</h2>
+                    <p class="hero-text">私たちは、お客様の「より良く」を支える通信事業を展開しています。安定した回線と最先端のソリューションで、社会の基盤を支えます。</p>
+                    <div class="hero-actions">
+                        <a href="service.html" class="btn-primary">事業・サービス</a>
+                        <a href="contact.html" class="btn-secondary">お問い合わせ</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h3>このサイトについて</h3>
-            <p>AileWell.com は、当社の通信サービスや取り組みをご紹介する公式サイトです。<a href="about.html">会社概要</a>・<a href="service.html">事業・サービス</a>・<a href="news.html">ニュース</a>・<a href="contact.html">お問い合わせ</a>など、必要な情報をご覧いただけます。</p>
+        <section class="block block-light">
+            <div class="block-inner">
+                <span class="block-label">ABOUT</span>
+                <h2 class="block-title">通信データを核として<br>切り拓く、つながる未来</h2>
+                <p class="block-text">AileWell は、法人向け通信インフラ・回線、クラウド連携、ネットワーク設計・保守まで、お客様のあらゆる「つながり」を支えます。データを軸に、意思決定を支えるサービスを提供しています。</p>
+                <a href="about.html" class="block-link">会社概要を見る →</a>
+            </div>
+        </section>
+
+        <section class="block block-white">
+            <div class="block-inner">
+                <span class="block-label">SERVICES</span>
+                <h2 class="block-title">通信インフラで導く<br>ソリューション</h2>
+                <p class="block-text">通信回線の設計・構築から運用・保守まで一貫してサポート。災害対策、リモートワーク、IoT まで、多様なシーンに合わせたサービスをご提供します。</p>
+                <a href="service.html" class="block-link">サービス一覧 →</a>
+            </div>
+        </section>
+
+        <section class="block block-light">
+            <div class="block-inner">
+                <span class="block-label">NEWS</span>
+                <h2 class="block-title">ニュース・お知らせ</h2>
+                <p class="block-text">プレスリリースやお知らせを掲載しています。</p>
+                <a href="news.html" class="block-link">ニュース一覧 →</a>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <p class="footer-links">
-                <a href="contact.html">お問い合わせ</a>
-                <span>|</span>
-                <a href="privacy.html">プライバシーポリシー</a>
-            </p>
-            <p><small>&copy; AileWell. All Rights Reserved.</small></p>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">AileWell</a>
+                    <p class="footer-tagline">通信で、未来をつなぐ</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-col">
+                        <span class="footer-col-title">企業情報</span>
+                        <a href="about.html">会社概要</a>
+                        <a href="service.html">事業・サービス</a>
+                        <a href="news.html">ニュース</a>
+                        <a href="recruit.html">採用情報</a>
+                        <a href="access.html">アクセス</a>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-col-title">お問い合わせ</span>
+                        <a href="contact.html">お問い合わせ</a>
+                        <a href="privacy.html">プライバシーポリシー</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; AileWell. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 </body>

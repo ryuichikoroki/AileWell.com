@@ -43,11 +43,11 @@
 }
 
 body {
-    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-family: "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
     margin: 0;
     padding: 0;
-    color: #2d3d4d;
-    line-height: 1.7;
+    color: #1a1a2e;
+    line-height: 1.8;
     background-color: #d8ecff;
     background-image:
         linear-gradient(160deg, #e8f4ff 0%, #dceeff 40%, #d6ebff 100%),
@@ -85,27 +85,36 @@ body > .site-footer {
     z-index: 1;
 }
 
-/* ヘッダー */
+/* ========================================
+   ヘッダー（Synspective / スカパーJSAT 風）
+   ======================================== */
 .site-header {
-    background: #1e90ff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(30, 144, 255, 0.98);
+    backdrop-filter: blur(10px);
     color: #fff;
-    padding: 16px 0;
-    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.35);
+    padding: 14px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
     animation: fade-in-down 0.5s ease-out;
 }
 
 .header-inner {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 32px;
 }
 
 .site-title {
     margin: 0;
     font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .site-title a {
@@ -121,35 +130,52 @@ body > .site-footer {
 .site-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 8px;
+    align-items: center;
 }
 
 .site-nav a {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.95);
     text-decoration: none;
     font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
     position: relative;
-    transition: opacity 0.25s ease;
-}
-
-.site-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 1px;
-    background: #fff;
-    transition: width 0.3s ease;
-}
-
-.site-nav a:hover::after,
-.site-nav a.current::after {
-    width: 100%;
+    transition: color 0.2s ease, background 0.2s ease;
 }
 
 .site-nav a:hover {
-    opacity: 0.95;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.site-nav a.current {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.site-nav a::after {
+    display: none;
+}
+
+.header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    background: #fff;
+    color: #1e90ff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* メイン */
@@ -189,22 +215,106 @@ body > .site-footer {
 .main > .content-section:nth-of-type(5) { animation-delay: 0.6s; }
 .main > .recruit-item { animation-delay: 0.3s; }
 
-/* トップのヒーロー */
+/* ========================================
+   ヒーロー（フルワイド・大見出し）
+   ======================================== */
 .hero {
     background: #fafcff;
-    border-radius: 12px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 20px rgba(30, 144, 255, 0.15);
+    margin-bottom: 0;
     animation: fade-in-up 0.6s ease-out 0.15s both;
-    transition: box-shadow 0.3s ease;
     overflow: hidden;
 }
 
-.hero:hover {
-    box-shadow: 0 8px 28px rgba(30, 144, 255, 0.2);
+/* フルワイドヒーロー（トップページ） */
+.hero-full {
+    border-radius: 0;
+    box-shadow: none;
 }
 
-/* ヒーロー画像バナー（通信イメージ） */
+.hero-full .hero-banner {
+    min-height: 85vh;
+    min-height: min(85vh, 720px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-full .hero-content {
+    text-align: center;
+    padding: 80px 24px 100px;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.hero-lead {
+    margin: 0 0 16px 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+}
+
+.hero-full .hero-title {
+    margin: 0 0 24px 0;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.02em;
+    color: #fff;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+}
+
+.hero-full .hero-text {
+    margin: 0 0 40px 0;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #1e90ff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* ヒーロー画像バナー（共通） */
 .hero-banner {
     position: relative;
     width: 100%;
@@ -225,7 +335,7 @@ body > .site-footer {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(30, 144, 255, 0.85) 0%, rgba(30, 144, 255, 0.4) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(30, 144, 255, 0.88) 0%, rgba(30, 144, 255, 0.5) 40%, transparent 100%);
     pointer-events: none;
 }
 
@@ -251,7 +361,11 @@ body > .site-footer {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
-/* ヒーローに画像がない場合（従来の見た目） */
+/* ヒーローに画像がない場合・従来レイアウト */
+.hero:hover {
+    box-shadow: 0 8px 28px rgba(30, 144, 255, 0.2);
+}
+
 .hero:not(:has(.hero-banner)) .hero-title {
     color: #1e90ff;
 }
@@ -263,6 +377,68 @@ body > .site-footer {
 
 .hero:not(:has(.hero-banner)) {
     padding: 48px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(30, 144, 255, 0.15);
+}
+
+/* ========================================
+   フルワイド・ブロックセクション（Synspective 風）
+   ======================================== */
+.block {
+    padding: 100px 24px;
+}
+
+.block-inner {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.block-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #1e90ff;
+    margin-bottom: 16px;
+}
+
+.block-title {
+    margin: 0 0 24px 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: #1a1a2e;
+}
+
+.block-text {
+    margin: 0 0 32px 0;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #4a5568;
+}
+
+.block-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.block-link:hover {
+    color: #1a7de8;
+    transform: translateX(4px);
+}
+
+.block-light {
+    background: #f0f7ff;
+}
+
+.block-white {
+    background: #fff;
 }
 
 /* 共通セクション */
@@ -377,36 +553,106 @@ body > .site-footer {
     background: #f8fbff;
 }
 
-/* フッター */
+/* ========================================
+   フッター（ダーク・マルチカラム）
+   ======================================== */
 .site-footer {
-    background: #1e90ff;
-    color: #fff;
-    padding: 24px 0;
-    margin-top: 48px;
+    background: #0d1929;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0;
+    margin-top: 0;
     animation: fade-in 0.6s ease-out 0.4s both;
 }
 
 .footer-inner {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
-    text-align: center;
+    padding: 64px 32px 0;
 }
 
-.site-footer small {
-    font-size: 0.85rem;
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 64px;
+    align-items: start;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand {
+    max-width: 280px;
+}
+
+.footer-logo {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: opacity 0.2s ease;
+}
+
+.footer-logo:hover {
     opacity: 0.9;
 }
 
+.footer-tagline {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-nav {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-col-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 4px;
+}
+
+.footer-col a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding: 24px 0 32px;
+}
+
+.footer-copy {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* 従来のフッター（他ページ用） */
 .footer-links {
     margin-bottom: 12px;
 }
 
 .footer-links a {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-size: 0.9rem;
-    opacity: 0.95;
     transition: opacity 0.25s ease;
 }
 
@@ -418,6 +664,17 @@ body > .site-footer {
 .footer-links span {
     margin: 0 8px;
     opacity: 0.7;
+}
+
+.site-footer small {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* 他ページ：フッターに .footer-main がない場合 */
+.footer-inner:not(:has(.footer-main)) {
+    text-align: center;
+    padding: 48px 24px 32px;
 }
 
 /* お問い合わせフォーム */
@@ -645,23 +902,52 @@ body > .site-footer {
 
 @media (max-width: 768px) {
     .header-inner {
-        flex-direction: column;
-        gap: 16px;
-        align-items: stretch;
-        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 0 20px;
+        justify-content: space-between;
     }
 
     .site-title {
         font-size: 1.35rem;
     }
 
+    .header-cta {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+
     .site-nav {
+        order: 2;
+        width: 100%;
         justify-content: center;
-        gap: 12px;
+        gap: 8px;
     }
 
     .site-nav a {
         font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .block {
+        padding: 64px 20px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-inner {
+        padding: 48px 20px 0;
+    }
+
+    .footer-nav {
+        gap: 32px;
     }
 
     .main {
@@ -775,30 +1061,52 @@ body > .site-footer {
 
     .header-inner {
         padding: 0 16px;
-        gap: 12px;
+        gap: 10px;
+    }
+
+    .header-cta {
+        padding: 10px 16px;
+        font-size: 0.85rem;
     }
 
     .site-nav {
-        flex-direction: column;
-        gap: 8px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .site-nav a {
-        display: block;
-        padding: 10px;
-        background: rgba(255, 255, 255, 0.15);
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 4px;
-        font-size: 0.9rem;
-    }
-
-    .site-nav a::after {
-        display: none;
     }
 
     .site-nav a:hover,
     .site-nav a.current {
-        background: rgba(255, 255, 255, 0.25);
-        text-decoration: none;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-full .hero-content {
+        padding: 60px 16px 80px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .block {
+        padding: 48px 16px;
+    }
+
+    .block-title {
+        font-size: 1.5rem;
     }
 
     .main {
