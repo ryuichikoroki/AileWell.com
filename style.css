@@ -1,0 +1,188 @@
+/* ========================================
+   ailewell.com 共通スタイル
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.7;
+    background: #f5f5f5;
+}
+
+/* ヘッダー */
+.site-header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 16px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.site-title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    opacity: 0.9;
+}
+
+.site-nav {
+    display: flex;
+    gap: 24px;
+}
+
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a.current {
+    text-decoration: underline;
+}
+
+/* メイン */
+.main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+}
+
+/* トップのヒーロー */
+.hero {
+    background: #fff;
+    border-radius: 8px;
+    padding: 48px 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.hero-title {
+    margin: 0 0 16px 0;
+    font-size: 1.75rem;
+    color: #2c3e50;
+}
+
+.hero-text {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* 共通セクション */
+.section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px 40px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.section h3 {
+    margin: 0 0 16px 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #4a90d9;
+}
+
+.section p {
+    margin: 0 0 12px 0;
+    color: #555;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+.section a {
+    color: #4a90d9;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+/* 会社概要ページ用 */
+.page-title {
+    margin: 0 0 32px 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.about-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px 40px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.about-section h3 {
+    margin: 0 0 16px 0;
+    font-size: 1.15rem;
+    color: #2c3e50;
+}
+
+.about-section p,
+.about-section dl {
+    margin: 0 0 12px 0;
+    color: #555;
+}
+
+.about-section dt {
+    font-weight: bold;
+    color: #333;
+    margin-top: 12px;
+}
+
+.about-section dt:first-child {
+    margin-top: 0;
+}
+
+.about-section dd {
+    margin: 4px 0 0 0;
+    padding-left: 1em;
+}
+
+/* フッター */
+.site-footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 24px 0;
+    margin-top: 48px;
+}
+
+.footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.site-footer small {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
