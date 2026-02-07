@@ -1,26 +1,97 @@
 /* ========================================
-   ailewell.com 共通スタイル
+   AileWell.com 共通スタイル
    ======================================== */
 
 * {
     box-sizing: border-box;
 }
 
+/* ========================================
+   アニメーション定義
+   ======================================== */
+
+@keyframes bg-drift {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+    50% { transform: translate(2%, 1%) scale(1.02); opacity: 0.5; }
+}
+
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 body {
     font-family: "Yu Gothic", "Meiryo", sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #2d3d4d;
     line-height: 1.7;
-    background: #f5f5f5;
+    background-color: #dceef9;
+    background-image:
+        linear-gradient(160deg, #eef6fc 0%, #e5f2fb 30%, #e0effa 70%, #dceef9 100%),
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.7) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(220, 238, 252, 0.9) 0%, transparent 40%),
+        radial-gradient(circle at 50% 100%, rgba(200, 225, 245, 0.3) 0%, transparent 50%);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 背景のゆっくりした動き（疑似要素でオーバーレイ） */
+body::before {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        ellipse 60% 50% at 70% 30%,
+        rgba(255, 255, 255, 0.15) 0%,
+        transparent 50%
+    );
+    animation: bg-drift 12s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body > .site-header,
+body > .main,
+body > .site-footer {
+    position: relative;
+    z-index: 1;
 }
 
 /* ヘッダー */
 .site-header {
-    background: #2c3e50;
+    background: #2d5a7b;
     color: #fff;
     padding: 16px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(45, 90, 123, 0.2);
+    animation: fade-in-down 0.5s ease-out;
 }
 
 .header-inner {
@@ -40,6 +111,7 @@ body {
 .site-title a {
     color: #fff;
     text-decoration: none;
+    transition: opacity 0.25s ease;
 }
 
 .site-title a:hover {
@@ -56,11 +128,28 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 0.9rem;
+    position: relative;
+    transition: opacity 0.25s ease;
 }
 
-.site-nav a:hover,
-.site-nav a.current {
-    text-decoration: underline;
+.site-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.site-nav a:hover::after,
+.site-nav a.current::after {
+    width: 100%;
+}
+
+.site-nav a:hover {
+    opacity: 0.95;
 }
 
 /* メイン */
@@ -70,47 +159,89 @@ body {
     padding: 48px 24px 64px;
 }
 
+/* メイン直下の要素を順にフェードイン（全ページ共通） */
+.main > .page-title {
+    animation: fade-in-up 0.5s ease-out 0.1s both;
+}
+
+.main > *:not(.page-title) {
+    animation: fade-in-up 0.5s ease-out both;
+}
+
+.main > .hero { animation-delay: 0.15s; }
+.main > .section:nth-of-type(1) { animation-delay: 0.25s; }
+.main > .section:nth-of-type(2) { animation-delay: 0.35s; }
+.main > .section:nth-of-type(3) { animation-delay: 0.45s; }
+.main > .section:nth-of-type(4) { animation-delay: 0.55s; }
+.main > .section:nth-of-type(5) { animation-delay: 0.65s; }
+.main > .about-section:nth-of-type(1) { animation-delay: 0.2s; }
+.main > .about-section:nth-of-type(2) { animation-delay: 0.3s; }
+.main > .about-section:nth-of-type(3) { animation-delay: 0.4s; }
+.main > .contact-section { animation-delay: 0.2s; }
+.main > .service-item:nth-of-type(1) { animation-delay: 0.2s; }
+.main > .service-item:nth-of-type(2) { animation-delay: 0.3s; }
+.main > .service-item:nth-of-type(3) { animation-delay: 0.4s; }
+.main > .news-list { animation-delay: 0.2s; }
+.main > .content-section:nth-of-type(1) { animation-delay: 0.2s; }
+.main > .content-section:nth-of-type(2) { animation-delay: 0.3s; }
+.main > .content-section:nth-of-type(3) { animation-delay: 0.4s; }
+.main > .content-section:nth-of-type(4) { animation-delay: 0.5s; }
+.main > .content-section:nth-of-type(5) { animation-delay: 0.6s; }
+.main > .recruit-item { animation-delay: 0.3s; }
+
 /* トップのヒーロー */
 .hero {
-    background: #fff;
+    background: #fafcff;
     border-radius: 8px;
     padding: 48px 40px;
     margin-bottom: 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    animation: fade-in-up 0.6s ease-out 0.15s both;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero:hover {
+    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
 }
 
 .hero-title {
     margin: 0 0 16px 0;
     font-size: 1.75rem;
-    color: #2c3e50;
+    color: #2d5a7b;
 }
 
 .hero-text {
     margin: 0;
     font-size: 1.1rem;
-    color: #555;
+    color: #4a6a7a;
 }
 
 /* 共通セクション */
 .section {
-    background: #fff;
+    background: #fafcff;
     border-radius: 8px;
     padding: 32px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    animation: fade-in-up 0.6s ease-out both;
+    transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
 }
 
 .section h3 {
     margin: 0 0 16px 0;
     font-size: 1.25rem;
-    color: #2c3e50;
+    color: #2d5a7b;
     padding-bottom: 8px;
-    border-bottom: 2px solid #4a90d9;
+    border-bottom: 2px solid #5ba3d0;
 }
 
 .section p {
     margin: 0 0 12px 0;
-    color: #555;
+    color: #4a6a7a;
 }
 
 .section p:last-child {
@@ -118,44 +249,51 @@ body {
 }
 
 .section a {
-    color: #4a90d9;
+    color: #3d8bc2;
     text-decoration: none;
+    transition: color 0.25s ease, opacity 0.25s ease;
 }
 
 .section a:hover {
     text-decoration: underline;
+    color: #2d5a7b;
 }
 
 /* 会社概要ページ用 */
 .page-title {
     margin: 0 0 32px 0;
     font-size: 1.5rem;
-    color: #2c3e50;
+    color: #2d5a7b;
 }
 
 .about-section {
-    background: #fff;
+    background: #fafcff;
     border-radius: 8px;
     padding: 32px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
 }
 
 .about-section h3 {
     margin: 0 0 16px 0;
     font-size: 1.15rem;
-    color: #2c3e50;
+    color: #2d5a7b;
 }
 
 .about-section p,
 .about-section dl {
     margin: 0 0 12px 0;
-    color: #555;
+    color: #4a6a7a;
 }
 
 .about-section dt {
     font-weight: bold;
-    color: #333;
+    color: #2d3d4d;
     margin-top: 12px;
 }
 
@@ -170,10 +308,11 @@ body {
 
 /* フッター */
 .site-footer {
-    background: #2c3e50;
+    background: #2d5a7b;
     color: #fff;
     padding: 24px 0;
     margin-top: 48px;
+    animation: fade-in 0.6s ease-out 0.4s both;
 }
 
 .footer-inner {
@@ -197,10 +336,12 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
     opacity: 0.95;
+    transition: opacity 0.25s ease;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
+    opacity: 1;
 }
 
 .footer-links span {
@@ -210,11 +351,16 @@ body {
 
 /* お問い合わせフォーム */
 .contact-section {
-    background: #fff;
+    background: #fafcff;
     border-radius: 8px;
     padding: 32px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-section:hover {
+    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
 }
 
 .form-group {
@@ -225,7 +371,7 @@ body {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
-    color: #333;
+    color: #2d3d4d;
 }
 
 .form-group input,
@@ -233,7 +379,7 @@ body {
     width: 100%;
     max-width: 480px;
     padding: 10px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #b8d4e8;
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
@@ -246,54 +392,59 @@ body {
 
 .form-note {
     font-size: 0.9rem;
-    color: #777;
+    color: #5a7a8a;
     margin-top: 24px;
 }
 
 .contact-info {
     margin-top: 24px;
     padding-top: 24px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #dceaf5;
 }
 
 .contact-info p {
     margin: 0 0 8px 0;
-    color: #555;
+    color: #4a6a7a;
 }
 
 /* 事業・サービス一覧 */
 .service-item {
-    background: #fff;
+    background: #fafcff;
     border-radius: 8px;
     padding: 28px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
 }
 
 .service-item h3 {
     margin: 0 0 12px 0;
     font-size: 1.2rem;
-    color: #2c3e50;
+    color: #2d5a7b;
 }
 
 .service-item p {
     margin: 0;
-    color: #555;
+    color: #4a6a7a;
 }
 
 /* ニュース一覧 */
 .news-list {
-    background: #fff;
+    background: #fafcff;
     border-radius: 8px;
     padding: 0;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
     overflow: hidden;
 }
 
 .news-item {
     padding: 20px 40px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e0eef8;
 }
 
 .news-item:last-child {
@@ -301,24 +452,25 @@ body {
 }
 
 .news-item a {
-    color: #333;
+    color: #2d3d4d;
     text-decoration: none;
+    transition: color 0.25s ease;
 }
 
 .news-item a:hover {
-    color: #4a90d9;
+    color: #3d8bc2;
 }
 
 .news-date {
     font-size: 0.9rem;
-    color: #777;
+    color: #5a7a8a;
     margin-right: 16px;
 }
 
 .news-cat {
     display: inline-block;
     font-size: 0.75rem;
-    background: #4a90d9;
+    background: #5ba3d0;
     color: #fff;
     padding: 2px 8px;
     border-radius: 4px;
@@ -327,23 +479,28 @@ body {
 
 /* プライバシーポリシー・採用・アクセス */
 .content-section {
-    background: #fff;
+    background: #fafcff;
     border-radius: 8px;
     padding: 32px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
 }
 
 .content-section h3 {
     margin: 0 0 16px 0;
     font-size: 1.15rem;
-    color: #2c3e50;
+    color: #2d5a7b;
 }
 
 .content-section p,
 .content-section ul {
     margin: 0 0 12px 0;
-    color: #555;
+    color: #4a6a7a;
 }
 
 .content-section ul {
@@ -353,7 +510,7 @@ body {
 .access-address {
     margin: 16px 0;
     padding: 16px;
-    background: #f8f9fa;
+    background: #eef6fc;
     border-radius: 4px;
     font-size: 1rem;
 }
@@ -365,5 +522,194 @@ body {
 .recruit-item h4 {
     margin: 0 0 8px 0;
     font-size: 1.05rem;
-    color: #2c3e50;
+    color: #2d5a7b;
+}
+
+/* ========================================
+   レスポンシブ（スマホ・タブレット）
+   ======================================== */
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 1.35rem;
+    }
+
+    .site-nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .site-nav a {
+        font-size: 0.85rem;
+    }
+
+    .main {
+        padding: 24px 16px 48px;
+    }
+
+    .hero {
+        padding: 32px 20px;
+        margin-bottom: 24px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .section,
+    .about-section,
+    .contact-section,
+    .content-section {
+        padding: 24px 20px;
+        margin-bottom: 20px;
+    }
+
+    .section h3,
+    .about-section h3,
+    .content-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .page-title {
+        font-size: 1.35rem;
+        margin-bottom: 24px;
+    }
+
+    .service-item {
+        padding: 20px 20px;
+        margin-bottom: 20px;
+    }
+
+    .service-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .news-list {
+        margin-bottom: 20px;
+    }
+
+    .news-item {
+        padding: 16px 20px;
+        display: block;
+    }
+
+    .news-date {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        max-width: 100%;
+    }
+
+    .access-address {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .site-footer {
+        margin-top: 32px;
+        padding: 20px 0;
+    }
+
+    .footer-inner {
+        padding: 0 16px;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 12px 0;
+    }
+
+    .header-inner {
+        padding: 0 16px;
+        gap: 12px;
+    }
+
+    .site-nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .site-nav a {
+        display: block;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+    .site-nav a::after {
+        display: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.current {
+        background: rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+    }
+
+    .main {
+        padding: 20px 12px 40px;
+    }
+
+    .hero {
+        padding: 24px 16px;
+    }
+
+    .hero-title {
+        font-size: 1.35rem;
+    }
+
+    .section,
+    .about-section,
+    .contact-section,
+    .content-section,
+    .service-item {
+        padding: 20px 16px;
+        margin-bottom: 16px;
+    }
+
+    .page-title {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+    .news-item {
+        padding: 14px 16px;
+    }
+}
+
+/* アニメーションを減らす設定（アクセシビリティ） */
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
+        opacity: 0.3;
+    }
+
+    .site-header,
+    .hero,
+    .section,
+    .site-footer,
+    .main > * {
+        animation: none !important;
+    }
 }
