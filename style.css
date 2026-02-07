@@ -48,13 +48,14 @@ body {
 
 .site-nav {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .site-nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .site-nav a:hover,
@@ -185,4 +186,184 @@ body {
 .site-footer small {
     font-size: 0.85rem;
     opacity: 0.9;
+}
+
+.footer-links {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links span {
+    margin: 0 8px;
+    opacity: 0.7;
+}
+
+/* お問い合わせフォーム */
+.contact-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px 40px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 24px;
+}
+
+.contact-info {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+}
+
+.contact-info p {
+    margin: 0 0 8px 0;
+    color: #555;
+}
+
+/* 事業・サービス一覧 */
+.service-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 28px 40px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.service-item h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.service-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* ニュース一覧 */
+.news-list {
+    background: #fff;
+    border-radius: 8px;
+    padding: 0;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+.news-item {
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    color: #4a90d9;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-right: 16px;
+}
+
+.news-cat {
+    display: inline-block;
+    font-size: 0.75rem;
+    background: #4a90d9;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+/* プライバシーポリシー・採用・アクセス */
+.content-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px 40px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.content-section h3 {
+    margin: 0 0 16px 0;
+    font-size: 1.15rem;
+    color: #2c3e50;
+}
+
+.content-section p,
+.content-section ul {
+    margin: 0 0 12px 0;
+    color: #555;
+}
+
+.content-section ul {
+    padding-left: 1.5em;
+}
+
+.access-address {
+    margin: 16px 0;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.recruit-item {
+    margin-bottom: 24px;
+}
+
+.recruit-item h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.05rem;
+    color: #2c3e50;
 }
