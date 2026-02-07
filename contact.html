@@ -27,47 +27,72 @@
     </header>
 
     <main class="main">
-        <h2 class="page-title">お問い合わせ</h2>
+        <header class="page-hero">
+            <div class="page-hero-inner">
+                <h1 class="page-hero-title">お問い合わせ</h1>
+                <p class="page-hero-sub">Contact</p>
+            </div>
+        </header>
 
-        <section class="contact-section">
-            <p>以下のフォームよりお問い合わせください。内容を確認のうえ、担当者よりご連絡いたします。</p>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">お名前 <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+        <section class="block block-light">
+            <div class="block-inner">
+                <p>以下のフォームよりお問い合わせください。内容を確認のうえ、担当者よりご連絡いたします。</p>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="例：example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">お問い合わせ種別</label>
+                        <input type="text" id="subject" name="subject" placeholder="例：サービスについて">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" required placeholder="ご用件をご記入ください"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">送信する</button>
+                </form>
+                <p class="form-note">※ フォーム送信にはサーバー側の設定（メール送信やフォーム処理）が必要です。未設定の場合は、下記のメールアドレスへ直接ご連絡ください。</p>
+                <div class="contact-info">
+                    <h3>直接のお問い合わせ</h3>
+                    <p><strong>メール</strong>：info@AileWell.com（実際のアドレスに変更してください）</p>
+                    <p><strong>電話</strong>：03-XXXX-XXXX（実際の番号に変更してください）</p>
+                    <p><strong>受付時間</strong>：平日 9:00～18:00</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">メールアドレス <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="例：example@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="subject">お問い合わせ種別</label>
-                    <input type="text" id="subject" name="subject" placeholder="例：サービスについて">
-                </div>
-                <div class="form-group">
-                    <label for="message">お問い合わせ内容 <span class="required">*</span></label>
-                    <textarea id="message" name="message" required placeholder="ご用件をご記入ください"></textarea>
-                </div>
-                <button type="submit" class="btn-submit">送信する</button>
-            </form>
-            <p class="form-note">※ フォーム送信にはサーバー側の設定（メール送信やフォーム処理）が必要です。未設定の場合は、下記のメールアドレスへ直接ご連絡ください。</p>
-            <div class="contact-info">
-                <h3>直接のお問い合わせ</h3>
-                <p><strong>メール</strong>：info@AileWell.com（実際のアドレスに変更してください）</p>
-                <p><strong>電話</strong>：03-XXXX-XXXX（実際の番号に変更してください）</p>
-                <p><strong>受付時間</strong>：平日 9:00～18:00</p>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <p class="footer-links">
-                <a href="contact.html">お問い合わせ</a>
-                <span>|</span>
-                <a href="privacy.html">プライバシーポリシー</a>
-            </p>
-            <p><small>&copy; AileWell. All Rights Reserved.</small></p>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">AileWell</a>
+                    <p class="footer-tagline">通信で、未来をつなぐ</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-col">
+                        <span class="footer-col-title">企業情報</span>
+                        <a href="about.html">会社概要</a>
+                        <a href="service.html">事業・サービス</a>
+                        <a href="news.html">ニュース</a>
+                        <a href="recruit.html">採用情報</a>
+                        <a href="access.html">アクセス</a>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-col-title">お問い合わせ</span>
+                        <a href="contact.html">お問い合わせ</a>
+                        <a href="privacy.html">プライバシーポリシー</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; AileWell. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 </body>

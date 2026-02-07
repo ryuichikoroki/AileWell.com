@@ -27,37 +27,63 @@
     </header>
 
     <main class="main">
-        <h2 class="page-title">ニュース・お知らせ</h2>
+        <header class="page-hero">
+            <div class="page-hero-inner">
+                <h1 class="page-hero-title">ニュース・お知らせ</h1>
+                <p class="page-hero-sub">News</p>
+            </div>
+        </header>
 
-        <div class="news-list">
-            <div class="news-item">
-                <span class="news-date">2026.02.07</span>
-                <span class="news-cat">お知らせ</span>
-                <a href="#">公式サイトをオープンしました。</a>
+        <section class="block block-light">
+            <div class="block-inner">
+                <div class="news-list">
+                    <div class="news-item">
+                        <span class="news-date">2026.02.07</span>
+                        <span class="news-cat">お知らせ</span>
+                        <a href="#">公式サイトをオープンしました。</a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">2026.02.01</span>
+                        <span class="news-cat">お知らせ</span>
+                        <a href="#">ニュースのタイトルをここに記載します。クリックで詳細ページへ。</a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">2026.01.15</span>
+                        <span class="news-cat">プレスリリース</span>
+                        <a href="#">プレスリリースやメディア掲載のタイトルを記載します。</a>
+                    </div>
+                </div>
+                <p class="form-note">※ 詳細ページが必要な場合は、各ニュース用のHTMLを追加し、リンク先を変更してください。</p>
             </div>
-            <div class="news-item">
-                <span class="news-date">2026.02.01</span>
-                <span class="news-cat">お知らせ</span>
-                <a href="#">ニュースのタイトルをここに記載します。クリックで詳細ページへ。</a>
-            </div>
-            <div class="news-item">
-                <span class="news-date">2026.01.15</span>
-                <span class="news-cat">プレスリリース</span>
-                <a href="#">プレスリリースやメディア掲載のタイトルを記載します。</a>
-            </div>
-        </div>
-
-        <p style="color:#777; font-size:0.9rem;">※ 詳細ページが必要な場合は、各ニュース用のHTMLを追加し、リンク先を変更してください。</p>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <p class="footer-links">
-                <a href="contact.html">お問い合わせ</a>
-                <span>|</span>
-                <a href="privacy.html">プライバシーポリシー</a>
-            </p>
-            <p><small>&copy; AileWell. All Rights Reserved.</small></p>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">AileWell</a>
+                    <p class="footer-tagline">通信で、未来をつなぐ</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-col">
+                        <span class="footer-col-title">企業情報</span>
+                        <a href="about.html">会社概要</a>
+                        <a href="service.html">事業・サービス</a>
+                        <a href="news.html">ニュース</a>
+                        <a href="recruit.html">採用情報</a>
+                        <a href="access.html">アクセス</a>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-col-title">お問い合わせ</span>
+                        <a href="contact.html">お問い合わせ</a>
+                        <a href="privacy.html">プライバシーポリシー</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; AileWell. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 </body>
