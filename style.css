@@ -48,12 +48,12 @@ body {
     padding: 0;
     color: #2d3d4d;
     line-height: 1.7;
-    background-color: #dceef9;
+    background-color: #d8ecff;
     background-image:
-        linear-gradient(160deg, #eef6fc 0%, #e5f2fb 30%, #e0effa 70%, #dceef9 100%),
-        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.7) 0%, transparent 40%),
-        radial-gradient(circle at 85% 85%, rgba(220, 238, 252, 0.9) 0%, transparent 40%),
-        radial-gradient(circle at 50% 100%, rgba(200, 225, 245, 0.3) 0%, transparent 50%);
+        linear-gradient(160deg, #e8f4ff 0%, #dceeff 40%, #d6ebff 100%),
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.75) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(30, 144, 255, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 100%, rgba(30, 144, 255, 0.08) 0%, transparent 55%);
     background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
     min-height: 100vh;
     position: relative;
@@ -87,10 +87,10 @@ body > .site-footer {
 
 /* ヘッダー */
 .site-header {
-    background: #2d5a7b;
+    background: #1e90ff;
     color: #fff;
     padding: 16px 0;
-    box-shadow: 0 2px 4px rgba(45, 90, 123, 0.2);
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.35);
     animation: fade-in-down 0.5s ease-out;
 }
 
@@ -192,28 +192,77 @@ body > .site-footer {
 /* トップのヒーロー */
 .hero {
     background: #fafcff;
-    border-radius: 8px;
-    padding: 48px 40px;
+    border-radius: 12px;
     margin-bottom: 40px;
-    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    box-shadow: 0 4px 20px rgba(30, 144, 255, 0.15);
     animation: fade-in-up 0.6s ease-out 0.15s both;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .hero:hover {
-    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
+    box-shadow: 0 8px 28px rgba(30, 144, 255, 0.2);
+}
+
+/* ヒーロー画像バナー（通信イメージ） */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-banner .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(30, 144, 255, 0.85) 0%, rgba(30, 144, 255, 0.4) 50%, transparent 100%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 40px 32px;
+    width: 100%;
 }
 
 .hero-title {
-    margin: 0 0 16px 0;
-    font-size: 1.75rem;
-    color: #2d5a7b;
+    margin: 0 0 12px 0;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-text {
     margin: 0;
     font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* ヒーローに画像がない場合（従来の見た目） */
+.hero:not(:has(.hero-banner)) .hero-title {
+    color: #1e90ff;
+}
+
+.hero:not(:has(.hero-banner)) .hero-text {
     color: #4a6a7a;
+    text-shadow: none;
+}
+
+.hero:not(:has(.hero-banner)) {
+    padding: 48px 40px;
 }
 
 /* 共通セクション */
@@ -222,21 +271,21 @@ body > .site-footer {
     border-radius: 8px;
     padding: 32px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
     animation: fade-in-up 0.6s ease-out both;
     transition: box-shadow 0.3s ease;
 }
 
 .section:hover {
-    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
+    box-shadow: 0 8px 24px rgba(30, 144, 255, 0.12);
 }
 
 .section h3 {
     margin: 0 0 16px 0;
     font-size: 1.25rem;
-    color: #2d5a7b;
+    color: #1e90ff;
     padding-bottom: 8px;
-    border-bottom: 2px solid #5ba3d0;
+    border-bottom: 2px solid #4da3ff;
 }
 
 .section p {
@@ -249,21 +298,21 @@ body > .site-footer {
 }
 
 .section a {
-    color: #3d8bc2;
+    color: #1a7de8;
     text-decoration: none;
     transition: color 0.25s ease, opacity 0.25s ease;
 }
 
 .section a:hover {
     text-decoration: underline;
-    color: #2d5a7b;
+    color: #1e90ff;
 }
 
 /* 会社概要ページ用 */
 .page-title {
     margin: 0 0 32px 0;
     font-size: 1.5rem;
-    color: #2d5a7b;
+    color: #1e90ff;
 }
 
 .about-section {
@@ -271,18 +320,18 @@ body > .site-footer {
     border-radius: 8px;
     padding: 32px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
     transition: box-shadow 0.3s ease;
 }
 
 .about-section:hover {
-    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
+    box-shadow: 0 8px 24px rgba(30, 144, 255, 0.12);
 }
 
 .about-section h3 {
     margin: 0 0 16px 0;
     font-size: 1.15rem;
-    color: #2d5a7b;
+    color: #1e90ff;
 }
 
 .about-section p,
@@ -306,9 +355,31 @@ body > .site-footer {
     padding-left: 1em;
 }
 
+/* 通信イメージ写真（会社概要・セクション用） */
+.section-figure {
+    margin: 0 0 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(30, 144, 255, 0.12);
+}
+
+.section-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.section-figure figcaption {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: #4a6a7a;
+    background: #f8fbff;
+}
+
 /* フッター */
 .site-footer {
-    background: #2d5a7b;
+    background: #1e90ff;
     color: #fff;
     padding: 24px 0;
     margin-top: 48px;
@@ -355,12 +426,12 @@ body > .site-footer {
     border-radius: 8px;
     padding: 32px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
     transition: box-shadow 0.3s ease;
 }
 
 .contact-section:hover {
-    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
+    box-shadow: 0 8px 24px rgba(30, 144, 255, 0.12);
 }
 
 .form-group {
@@ -372,6 +443,10 @@ body > .site-footer {
     margin-bottom: 6px;
     font-weight: bold;
     color: #2d3d4d;
+}
+
+.form-group .required {
+    color: #e74c3c;
 }
 
 .form-group input,
@@ -388,6 +463,24 @@ body > .site-footer {
 .form-group textarea {
     min-height: 120px;
     resize: vertical;
+}
+
+/* 送信ボタン（dodgerblue 統一） */
+.btn-submit {
+    padding: 12px 28px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-submit:hover {
+    background: #1a7de8;
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
 }
 
 .form-note {
@@ -413,23 +506,44 @@ body > .site-footer {
     border-radius: 8px;
     padding: 28px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
     transition: box-shadow 0.3s ease;
 }
 
 .service-item:hover {
-    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
+    box-shadow: 0 8px 24px rgba(30, 144, 255, 0.12);
 }
 
 .service-item h3 {
     margin: 0 0 12px 0;
     font-size: 1.2rem;
-    color: #2d5a7b;
+    color: #1e90ff;
 }
 
 .service-item p {
     margin: 0;
     color: #4a6a7a;
+}
+
+/* 事業・サービス用 写真 */
+.service-item .service-img-wrap {
+    margin: -28px -40px 20px -40px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    max-height: 200px;
+}
+
+.service-item .service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.service-item:hover .service-img {
+    transform: scale(1.03);
 }
 
 /* ニュース一覧 */
@@ -438,7 +552,7 @@ body > .site-footer {
     border-radius: 8px;
     padding: 0;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
     overflow: hidden;
 }
 
@@ -458,7 +572,7 @@ body > .site-footer {
 }
 
 .news-item a:hover {
-    color: #3d8bc2;
+    color: #1a7de8;
 }
 
 .news-date {
@@ -470,7 +584,7 @@ body > .site-footer {
 .news-cat {
     display: inline-block;
     font-size: 0.75rem;
-    background: #5ba3d0;
+    background: #1e90ff;
     color: #fff;
     padding: 2px 8px;
     border-radius: 4px;
@@ -483,18 +597,18 @@ body > .site-footer {
     border-radius: 8px;
     padding: 32px 40px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(45, 90, 123, 0.08);
+    box-shadow: 0 2px 8px rgba(30, 144, 255, 0.08);
     transition: box-shadow 0.3s ease;
 }
 
 .content-section:hover {
-    box-shadow: 0 8px 24px rgba(45, 90, 123, 0.12);
+    box-shadow: 0 8px 24px rgba(30, 144, 255, 0.12);
 }
 
 .content-section h3 {
     margin: 0 0 16px 0;
     font-size: 1.15rem;
-    color: #2d5a7b;
+    color: #1e90ff;
 }
 
 .content-section p,
@@ -522,7 +636,7 @@ body > .site-footer {
 .recruit-item h4 {
     margin: 0 0 8px 0;
     font-size: 1.05rem;
-    color: #2d5a7b;
+    color: #1e90ff;
 }
 
 /* ========================================
@@ -555,8 +669,15 @@ body > .site-footer {
     }
 
     .hero {
-        padding: 32px 20px;
         margin-bottom: 24px;
+    }
+
+    .hero-banner {
+        min-height: 220px;
+    }
+
+    .hero-content {
+        padding: 28px 20px 24px;
     }
 
     .hero-title {
@@ -565,6 +686,10 @@ body > .site-footer {
 
     .hero-text {
         font-size: 1rem;
+    }
+
+    .section-figure {
+        margin-bottom: 20px;
     }
 
     .section,
@@ -589,6 +714,15 @@ body > .site-footer {
     .service-item {
         padding: 20px 20px;
         margin-bottom: 20px;
+    }
+
+    .service-item .service-img-wrap {
+        margin: -20px -20px 16px -20px;
+        max-height: 160px;
+    }
+
+    .service-item .service-img {
+        height: 160px;
     }
 
     .service-item h3 {
@@ -652,7 +786,7 @@ body > .site-footer {
     .site-nav a {
         display: block;
         padding: 10px;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.15);
         border-radius: 4px;
         font-size: 0.9rem;
     }
@@ -663,7 +797,7 @@ body > .site-footer {
 
     .site-nav a:hover,
     .site-nav a.current {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.25);
         text-decoration: none;
     }
 
@@ -671,12 +805,25 @@ body > .site-footer {
         padding: 20px 12px 40px;
     }
 
-    .hero {
-        padding: 24px 16px;
+    .hero-banner {
+        min-height: 200px;
+    }
+
+    .hero-content {
+        padding: 24px 16px 20px;
     }
 
     .hero-title {
         font-size: 1.35rem;
+    }
+
+    .service-item .service-img-wrap {
+        margin: -20px -16px 16px -16px;
+        max-height: 140px;
+    }
+
+    .service-item .service-img {
+        height: 140px;
     }
 
     .section,
