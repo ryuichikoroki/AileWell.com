@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-contact">
     <header class="site-header">
         <div class="header-inner">
             <h1 class="site-title"><a href="index.html">AileWell</a></h1>
@@ -20,9 +20,8 @@
                 <a href="news.html">ニュース</a>
                 <a href="recruit.html">採用情報</a>
                 <a href="access.html">アクセス</a>
-                <a href="contact.html" class="current">お問い合わせ</a>
             </nav>
-            <a href="contact.html" class="header-cta">お問い合わせ</a>
+            <a href="contact.html" class="header-cta current">お問い合わせ</a>
         </div>
     </header>
 
@@ -36,32 +35,36 @@
 
         <section class="block block-light">
             <div class="block-inner">
-                <p>以下のフォームよりお問い合わせください。内容を確認のうえ、担当者よりご連絡いたします。</p>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">お名前 <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+                <p style="margin-bottom:32px;">以下のフォームよりお問い合わせください。内容を確認のうえ、担当者よりご連絡いたします。</p>
+                <div class="contact-layout">
+                    <div class="contact-form-wrap">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">お名前 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">メールアドレス <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="例：example@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">お問い合わせ種別</label>
+                                <input type="text" id="subject" name="subject" placeholder="例：サービスについて">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                                <textarea id="message" name="message" required placeholder="ご用件をご記入ください"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">送信する</button>
+                        </form>
+                        <p class="form-note">※ フォーム送信にはサーバー側の設定が必要です。未設定の場合は右記の連絡先へ直接ご連絡ください。</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">メールアドレス <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="例：example@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">お問い合わせ種別</label>
-                        <input type="text" id="subject" name="subject" placeholder="例：サービスについて">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
-                        <textarea id="message" name="message" required placeholder="ご用件をご記入ください"></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">送信する</button>
-                </form>
-                <p class="form-note">※ フォーム送信にはサーバー側の設定（メール送信やフォーム処理）が必要です。未設定の場合は、下記のメールアドレスへ直接ご連絡ください。</p>
-                <div class="contact-info">
-                    <h3>直接のお問い合わせ</h3>
-                    <p><strong>メール</strong>：info@AileWell.com（実際のアドレスに変更してください）</p>
-                    <p><strong>電話</strong>：03-XXXX-XXXX（実際の番号に変更してください）</p>
-                    <p><strong>受付時間</strong>：平日 9:00～18:00</p>
+                    <aside class="contact-side">
+                        <h3>直接のお問い合わせ</h3>
+                        <p><strong>メール</strong><br><a href="mailto:info@AileWell.com">info@AileWell.com</a></p>
+                        <p><strong>電話</strong><br>03-XXXX-XXXX</p>
+                        <p><strong>受付時間</strong><br>平日 9:00～18:00</p>
+                    </aside>
                 </div>
             </div>
         </section>
