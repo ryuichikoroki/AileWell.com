@@ -3,93 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>事業・サービス | AileWell.com</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>事業・サービス | AileWell</title>
+    <meta name="description" content="AileWellの事業・サービス一覧。通信インフラ・回線、クラウド連携サービス、ネットワーク設計・保守をご提供しています。">
+    <link rel="stylesheet" href="vendor/fonts/fonts.css">
+    <script src="vendor/tailwind/tailwind.min.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: { DEFAULT: '#1d6fd8', dark: '#123d6e', light: '#eff6ff' },
+                    accent: '#3b82f6',
+                    body: '#1e2535',
+                    muted: '#64748b',
+                    surface: '#f5f8fc',
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans JP"', '"Inter"', 'sans-serif'],
+                    display: ['"Inter"', '"Noto Sans JP"', 'sans-serif'],
+                },
+            },
+        },
+    }
+    </script>
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="page-service">
-    <header class="site-header">
-        <div class="header-inner">
-            <h1 class="site-title"><a href="index.html">AileWell</a></h1>
-            <nav class="site-nav">
-                <a href="index.html">トップ</a>
-                <a href="about.html">会社概要</a>
-                <a href="service.html" class="current">事業・サービス</a>
-                <a href="news.html">ニュース</a>
-                <a href="recruit.html">採用情報</a>
-                <a href="access.html">アクセス</a>
-            </nav>
-            <a href="contact.html" class="header-cta">お問い合わせ</a>
-        </div>
-    </header>
+<body class="text-body font-sans leading-relaxed relative overflow-x-hidden">
 
-    <main class="main">
-        <header class="page-hero">
-            <div class="page-hero-inner">
-                <h1 class="page-hero-title">事業・サービス</h1>
-                <p class="page-hero-sub">Services</p>
-            </div>
-        </header>
+    <header id="site-header"></header>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <div class="service-grid">
-                    <article class="service-card">
-                        <img class="service-card-img" src="https://images.unsplash.com/photo-1544197151-b424a6967fc8?w=600&q=80" alt="データセンター・通信基盤" width="600" height="200">
-                        <div class="service-card-body">
-                            <h3>通信インフラ・回線</h3>
-                            <p>安定した通信回線とインフラの設計・構築・運用をご提供。法人向け専用線やインターネット接続など、最適な環境を提案します。</p>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <img class="service-card-img" src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&q=80" alt="クラウド・連携" width="600" height="200">
-                        <div class="service-card-body">
-                            <h3>クラウド・連携サービス</h3>
-                            <p>ハイブリッド構成やセキュアなリモート接続など、現代の働き方に合わせた通信ソリューションを提供します。</p>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <img class="service-card-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="ネットワーク設計・保守" width="600" height="200">
-                        <div class="service-card-body">
-                            <h3>ネットワーク設計・保守</h3>
-                            <p>設計から導入、保守・監視まで一貫サポート。障害時の迅速な対応と拡張を見据えた設計で安心してご利用いただけます。</p>
-                        </div>
-                    </article>
-                </div>
-                <p style="margin-top:40px; text-align:center;">ご不明な点は<a href="contact.html" class="block-link">お問い合わせ</a>よりお気軽にどうぞ。</p>
+    <main class="relative z-[1]">
+
+        <!-- PAGE HERO -->
+        <section class="cta-gradient relative overflow-hidden pt-16 lg:pt-[72px]">
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+                <p class="text-blue-200/50 text-xs font-bold tracking-[0.25em] uppercase mb-4 font-display" data-aos="fade-up">Services</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="100">事業・サービス</h1>
+                <p class="text-white/60 mt-4 text-base md:text-lg" data-aos="fade-up" data-aos-delay="200">お客様の「つながり」を支えるソリューションを提供します。</p>
             </div>
         </section>
+
+        <!-- SERVICE 1 -->
+        <section class="py-10 md:py-14 lg:py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2">
+                        <div class="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl aspect-video flex items-center justify-center">
+                            <i class="fa-solid fa-network-wired text-7xl text-primary/25"></i>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <p class="service-num">01</p>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-body mb-5">通信インフラ・回線</h2>
+                        <p class="text-muted leading-relaxed mb-6">
+                            安定した通信回線とインフラの設計・構築・運用をご提供します。法人向け専用線やインターネット接続など、お客様の規模に合わせた最適な環境を提案します。昼夜・天候に左右されず、高品質でお客様の通信を支えます。
+                        </p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                法人向け専用線・インターネット接続
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                冗長構成・帯域保証による安定運用
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                災害時にも強い回線設計
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all duration-200">
+                            お問い合わせ <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE 2 -->
+        <section class="py-10 md:py-14 lg:py-20 bg-surface">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-20" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2">
+                        <div class="bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl aspect-video flex items-center justify-center">
+                            <i class="fa-solid fa-cloud text-7xl text-accent/25"></i>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <p class="service-num">02</p>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-body mb-5">クラウド・連携サービス</h2>
+                        <p class="text-muted leading-relaxed mb-6">
+                            クラウドとオンプレミスを組み合わせたハイブリッド構成や、セキュアなリモート接続など、現代の働き方に合わせた通信ソリューションを提供します。データサイエンスの活用で、業務の効率化も支援します。
+                        </p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                ハイブリッドクラウド構成の設計・構築
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                セキュアなリモートアクセス環境
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                データ収集・分析・可視化のワンストップ支援
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all duration-200">
+                            お問い合わせ <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE 3 -->
+        <section class="py-10 md:py-14 lg:py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20" data-aos="fade-up">
+                    <div class="w-full lg:w-1/2">
+                        <div class="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl aspect-video flex items-center justify-center">
+                            <i class="fa-solid fa-server text-7xl text-primary/25"></i>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <p class="service-num">03</p>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-body mb-5">ネットワーク設計・保守</h2>
+                        <p class="text-muted leading-relaxed mb-6">
+                            ネットワークの設計から導入、日々の保守・監視まで一貫してサポート。障害時の迅速な対応と、将来の拡張を見据えた設計で、安心してご利用いただけます。24時間365日の監視体制でお客様の通信を守ります。
+                        </p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                ネットワーク設計・導入・運用保守
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                24時間365日の監視・障害対応
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-muted">
+                                <i class="fa-solid fa-check text-primary mt-0.5 shrink-0"></i>
+                                将来の拡張を見据えたスケーラブル設計
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all duration-200">
+                            お問い合わせ <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-gradient py-12 md:py-16 relative">
+            <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
+                <p class="text-blue-200/50 text-xs font-bold tracking-[0.25em] uppercase mb-4 font-display" data-aos="fade-up">Contact</p>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6" data-aos="fade-up" data-aos-delay="100">ご不明な点はお気軽にどうぞ</h2>
+                <p class="text-white/70 mb-8" data-aos="fade-up" data-aos-delay="150">お客様の課題に合わせた最適なソリューションをご提案します。</p>
+                <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-200" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-envelope mr-2"></i> お問い合わせ
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">AileWell</a>
-                    <p class="footer-tagline">通信で、未来をつなぐ</p>
-                </div>
-                <nav class="footer-nav">
-                    <div class="footer-col">
-                        <span class="footer-col-title">企業情報</span>
-                        <a href="about.html">会社概要</a>
-                        <a href="service.html">事業・サービス</a>
-                        <a href="news.html">ニュース</a>
-                        <a href="recruit.html">採用情報</a>
-                        <a href="access.html">アクセス</a>
-                    </div>
-                    <div class="footer-col">
-                        <span class="footer-col-title">お問い合わせ</span>
-                        <a href="contact.html">お問い合わせ</a>
-                        <a href="privacy.html">プライバシーポリシー</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copy">&copy; AileWell. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer id="site-footer"></footer>
+
+    <script defer src="js/components.js"></script>
+    <script defer src="vendor/alpinejs/cdn.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

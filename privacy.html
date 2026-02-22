@@ -3,116 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー | AileWell.com</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>プライバシーポリシー | AileWell</title>
+    <meta name="description" content="株式会社AileWellのプライバシーポリシーです。個人情報の取り扱いについてご確認ください。">
+    <link rel="stylesheet" href="vendor/fonts/fonts.css">
+    <script src="vendor/tailwind/tailwind.min.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: { DEFAULT: '#1d6fd8', dark: '#123d6e', light: '#eff6ff' },
+                    accent: '#3b82f6',
+                    body: '#1e2535',
+                    muted: '#64748b',
+                    surface: '#f5f8fc',
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans JP"', '"Inter"', 'sans-serif'],
+                    display: ['"Inter"', '"Noto Sans JP"', 'sans-serif'],
+                },
+            },
+        },
+    }
+    </script>
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="page-privacy">
-    <header class="site-header">
-        <div class="header-inner">
-            <h1 class="site-title"><a href="index.html">AileWell</a></h1>
-            <nav class="site-nav">
-                <a href="index.html">トップ</a>
-                <a href="about.html">会社概要</a>
-                <a href="service.html">事業・サービス</a>
-                <a href="news.html">ニュース</a>
-                <a href="recruit.html">採用情報</a>
-                <a href="access.html">アクセス</a>
-            </nav>
-            <a href="contact.html" class="header-cta">お問い合わせ</a>
-        </div>
-    </header>
+<body class="text-body font-sans leading-relaxed relative overflow-x-hidden">
 
-    <main class="main">
-        <header class="page-hero">
-            <div class="page-hero-inner">
-                <h1 class="page-hero-title">プライバシーポリシー</h1>
-                <p class="page-hero-sub">Privacy Policy</p>
-            </div>
-        </header>
+    <header id="site-header"></header>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <p>株式会社 AileWell（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下の方針に基づき適切な取り扱いと保護に努めます。</p>
+    <main class="relative z-[1]">
+
+        <!-- PAGE HERO -->
+        <section class="cta-gradient relative overflow-hidden pt-16 lg:pt-[72px]">
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+                <p class="text-blue-200/50 text-xs font-bold tracking-[0.25em] uppercase mb-4 font-display" data-aos="fade-up">Privacy Policy</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="100">プライバシーポリシー</h1>
             </div>
         </section>
 
-        <section class="block block-white">
-            <div class="block-inner">
-                <h3>1. 個人情報の収集</h3>
-                <p>当社は、お問い合わせやサービスご利用に際し、必要な範囲で氏名・メールアドレス・電話番号等の個人情報を収集することがあります。収集の目的は、ご連絡・ご案内・サービス提供に限定します。</p>
+        <!-- POLICY CONTENT -->
+        <section class="py-10 md:py-14 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="prose-custom space-y-12" data-aos="fade-up">
+
+                    <div>
+                        <p class="text-muted text-sm leading-relaxed mb-8">
+                            株式会社 AileWell（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下のポリシーに基づき適切に取り扱います。
+                        </p>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">1. 個人情報の定義</h2>
+                        <p class="text-muted text-sm leading-relaxed">
+                            本ポリシーにおける「個人情報」とは、個人情報の保護に関する法律（個人情報保護法）に定める個人情報を指します。氏名、住所、電話番号、メールアドレス等、特定の個人を識別できる情報を含みます。
+                        </p>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">2. 個人情報の収集</h2>
+                        <p class="text-muted text-sm leading-relaxed mb-3">当社は、以下の場合に個人情報を収集することがあります。</p>
+                        <ul class="list-disc list-inside space-y-2 text-muted text-sm pl-2">
+                            <li>お問い合わせフォームのご利用時</li>
+                            <li>サービスのお申し込み・お見積もり依頼時</li>
+                            <li>採用応募時</li>
+                            <li>その他、当社との取引・業務に関連する場合</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">3. 利用目的</h2>
+                        <p class="text-muted text-sm leading-relaxed mb-3">収集した個人情報は、以下の目的のために利用します。</p>
+                        <ul class="list-disc list-inside space-y-2 text-muted text-sm pl-2">
+                            <li>お問い合わせ・ご相談への対応</li>
+                            <li>サービスの提供および契約の履行</li>
+                            <li>採用選考に関する連絡</li>
+                            <li>サービス改善・新サービスの案内</li>
+                            <li>法令上の義務の履行</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">4. 第三者への提供</h2>
+                        <p class="text-muted text-sm leading-relaxed">
+                            当社は、以下の場合を除き、お客様の個人情報を第三者に提供しません。
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-muted text-sm pl-2 mt-3">
+                            <li>お客様の同意がある場合</li>
+                            <li>法令に基づく場合</li>
+                            <li>人命・身体・財産の保護のために必要な場合</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">5. 安全管理措置</h2>
+                        <p class="text-muted text-sm leading-relaxed">
+                            当社は、個人情報の漏えい・滅失・毀損の防止のため、適切な安全管理措置を講じます。また、個人情報を取り扱う従業員に対して、適切な監督を行います。
+                        </p>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">6. 開示・訂正・削除</h2>
+                        <p class="text-muted text-sm leading-relaxed">
+                            お客様は、当社が保有する自己の個人情報について、開示・訂正・削除・利用停止を請求することができます。ご請求の場合は、お問い合わせよりご連絡ください。
+                        </p>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">7. Cookie等の利用</h2>
+                        <p class="text-muted text-sm leading-relaxed">
+                            当社のウェブサイトでは、アクセス解析等を目的としてCookieを利用する場合があります。ブラウザの設定によりCookieを無効にすることができますが、一部の機能が利用できなくなる場合があります。
+                        </p>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">8. プライバシーポリシーの変更</h2>
+                        <p class="text-muted text-sm leading-relaxed">
+                            当社は、必要に応じて本ポリシーを変更することがあります。変更後のポリシーは、当ウェブサイトに掲載した時点より効力を生じます。
+                        </p>
+                    </div>
+
+                    <div class="border-t border-surface pt-10">
+                        <h2 class="text-lg font-bold text-body mb-4">9. お問い合わせ</h2>
+                        <p class="text-muted text-sm leading-relaxed mb-4">
+                            本ポリシーに関するお問い合わせは、以下までご連絡ください。
+                        </p>
+                        <div class="bg-surface rounded-xl p-6 text-sm text-muted">
+                            <p class="font-bold text-body mb-1">株式会社 AileWell</p>
+                            <p>〒XXX-XXXX 〇〇県〇〇市〇〇 〇-〇-〇</p>
+                            <p>メール：info@ailewell.com</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-surface pt-8 text-right">
+                        <p class="text-muted text-xs">制定日：2026年2月7日</p>
+                        <p class="text-muted text-xs">株式会社 AileWell</p>
+                    </div>
+
+                </div>
             </div>
         </section>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <h3>2. 個人情報の利用目的</h3>
-                <p>収集した個人情報は、以下の目的の範囲で利用します。</p>
-                <ul>
-                    <li>お問い合わせへの回答</li>
-                    <li>サービス・商品の提供および関連連絡</li>
-                    <li>重要なお知らせの送付</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="block block-white">
-            <div class="block-inner">
-                <h3>3. 第三者への提供</h3>
-                <p>当社は、法令に基づく場合を除き、お客様の同意なく個人情報を第三者に提供しません。</p>
-            </div>
-        </section>
-
-        <section class="block block-light">
-            <div class="block-inner">
-                <h3>4. 個人情報の管理</h3>
-                <p>個人情報への不正アクセス・紛失・破損・改ざん・漏洩を防ぐため、適切な安全管理措置を講じます。</p>
-            </div>
-        </section>
-
-        <section class="block block-white">
-            <div class="block-inner">
-                <h3>5. お問い合わせ</h3>
-                <p>個人情報の取り扱いに関するお問い合わせは、<a href="contact.html" class="block-link">お問い合わせページ</a>よりご連絡ください。</p>
-            </div>
-        </section>
-
-        <section class="block block-light">
-            <div class="block-inner">
-                <p><small>制定日：〇〇〇〇年〇月〇日（実際の日付に変更してください）</small></p>
-            </div>
-        </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">AileWell</a>
-                    <p class="footer-tagline">通信で、未来をつなぐ</p>
-                </div>
-                <nav class="footer-nav">
-                    <div class="footer-col">
-                        <span class="footer-col-title">企業情報</span>
-                        <a href="about.html">会社概要</a>
-                        <a href="service.html">事業・サービス</a>
-                        <a href="news.html">ニュース</a>
-                        <a href="recruit.html">採用情報</a>
-                        <a href="access.html">アクセス</a>
-                    </div>
-                    <div class="footer-col">
-                        <span class="footer-col-title">お問い合わせ</span>
-                        <a href="contact.html">お問い合わせ</a>
-                        <a href="privacy.html">プライバシーポリシー</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copy">&copy; AileWell. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer id="site-footer"></footer>
+
+    <script defer src="js/components.js"></script>
+    <script defer src="vendor/alpinejs/cdn.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,87 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ニュース・お知らせ | AileWell.com</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>ニュース・お知らせ | AileWell</title>
+    <meta name="description" content="AileWellの最新ニュース・お知らせ・プレスリリースをご覧いただけます。">
+    <link rel="stylesheet" href="vendor/fonts/fonts.css">
+    <script src="vendor/tailwind/tailwind.min.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: { DEFAULT: '#1d6fd8', dark: '#123d6e', light: '#eff6ff' },
+                    accent: '#3b82f6',
+                    body: '#1e2535',
+                    muted: '#64748b',
+                    surface: '#f5f8fc',
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans JP"', '"Inter"', 'sans-serif'],
+                    display: ['"Inter"', '"Noto Sans JP"', 'sans-serif'],
+                },
+            },
+        },
+    }
+    </script>
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="page-news">
-    <header class="site-header">
-        <div class="header-inner">
-            <h1 class="site-title"><a href="index.html">AileWell</a></h1>
-            <nav class="site-nav">
-                <a href="index.html">トップ</a>
-                <a href="about.html">会社概要</a>
-                <a href="service.html">事業・サービス</a>
-                <a href="news.html" class="current">ニュース</a>
-                <a href="recruit.html">採用情報</a>
-                <a href="access.html">アクセス</a>
-            </nav>
-            <a href="contact.html" class="header-cta">お問い合わせ</a>
-        </div>
-    </header>
+<body class="text-body font-sans leading-relaxed relative overflow-x-hidden">
 
-    <main class="main">
-        <header class="page-hero">
-            <div class="page-hero-inner">
-                <h1 class="page-hero-title">ニュース・お知らせ</h1>
-                <p class="page-hero-sub">News</p>
-            </div>
-        </header>
+    <header id="site-header"></header>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <div class="news-list-page">
-                    <div class="news-row">
-                        <span class="news-dt">2026.02.07</span>
-                        <span class="news-cat">お知らせ</span>
-                        <a href="#">公式サイトをオープンしました。</a>
-                    </div>
-                    <div class="news-row">
-                        <span class="news-dt">2026.02.01</span>
-                        <span class="news-cat">お知らせ</span>
-                        <a href="#">ニュースのタイトルをここに記載します。クリックで詳細ページへ。</a>
-                    </div>
-                    <div class="news-row">
-                        <span class="news-dt">2026.01.15</span>
-                        <span class="news-cat">プレスリリース</span>
-                        <a href="#">プレスリリースやメディア掲載のタイトルを記載します。</a>
-                    </div>
-                </div>
-                <p class="form-note">※ 詳細ページが必要な場合は、各ニュース用のHTMLを追加し、リンク先を変更してください。</p>
+    <main class="relative z-[1]">
+
+        <!-- PAGE HERO -->
+        <section class="cta-gradient relative overflow-hidden pt-16 lg:pt-[72px]">
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+                <p class="text-blue-200/50 text-xs font-bold tracking-[0.25em] uppercase mb-4 font-display" data-aos="fade-up">News</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="100">ニュース・お知らせ</h1>
             </div>
         </section>
+
+        <!-- NEWS LIST -->
+        <section class="py-10 md:py-14 lg:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Category Filter -->
+                <div class="flex flex-wrap gap-2 mb-10" data-aos="fade-up">
+                    <span class="px-4 py-1.5 bg-primary text-white text-xs font-bold rounded-full">すべて</span>
+                    <span class="px-4 py-1.5 bg-surface text-muted text-xs font-medium rounded-full cursor-pointer hover:bg-primary/10 transition-colors">お知らせ</span>
+                    <span class="px-4 py-1.5 bg-surface text-muted text-xs font-medium rounded-full cursor-pointer hover:bg-primary/10 transition-colors">プレスリリース</span>
+                </div>
+
+                <div class="space-y-3" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="news-card flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 bg-white border border-surface rounded-xl p-5 sm:p-6 hover:border-primary/20">
+                        <div class="flex items-center gap-3 shrink-0">
+                            <time class="text-muted text-sm font-display tabular-nums">2026.02.07</time>
+                            <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">お知らせ</span>
+                        </div>
+                        <p class="text-body font-medium text-sm sm:text-base">公式サイトをオープンしました。</p>
+                    </a>
+                    <a href="#" class="news-card flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 bg-white border border-surface rounded-xl p-5 sm:p-6 hover:border-primary/20">
+                        <div class="flex items-center gap-3 shrink-0">
+                            <time class="text-muted text-sm font-display tabular-nums">2026.02.01</time>
+                            <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">お知らせ</span>
+                        </div>
+                        <p class="text-body font-medium text-sm sm:text-base">ニュースのタイトルをここに記載します。クリックで詳細ページへ。</p>
+                    </a>
+                    <a href="#" class="news-card flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 bg-white border border-surface rounded-xl p-5 sm:p-6 hover:border-primary/20">
+                        <div class="flex items-center gap-3 shrink-0">
+                            <time class="text-muted text-sm font-display tabular-nums">2026.01.15</time>
+                            <span class="text-xs font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">プレスリリース</span>
+                        </div>
+                        <p class="text-body font-medium text-sm sm:text-base">プレスリリースやメディア掲載のタイトルを記載します。</p>
+                    </a>
+                </div>
+
+                <p class="text-muted text-xs mt-10 text-center" data-aos="fade-up">※ 詳細ページが必要な場合は、各ニュース用のHTMLを追加しリンク先を変更してください。</p>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">AileWell</a>
-                    <p class="footer-tagline">通信で、未来をつなぐ</p>
-                </div>
-                <nav class="footer-nav">
-                    <div class="footer-col">
-                        <span class="footer-col-title">企業情報</span>
-                        <a href="about.html">会社概要</a>
-                        <a href="service.html">事業・サービス</a>
-                        <a href="news.html">ニュース</a>
-                        <a href="recruit.html">採用情報</a>
-                        <a href="access.html">アクセス</a>
-                    </div>
-                    <div class="footer-col">
-                        <span class="footer-col-title">お問い合わせ</span>
-                        <a href="contact.html">お問い合わせ</a>
-                        <a href="privacy.html">プライバシーポリシー</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copy">&copy; AileWell. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer id="site-footer"></footer>
+
+    <script defer src="js/components.js"></script>
+    <script defer src="vendor/alpinejs/cdn.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

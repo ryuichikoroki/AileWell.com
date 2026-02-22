@@ -3,119 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AileWell.com | トップ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="header-inner">
-            <h1 class="site-title"><a href="index.html">AileWell</a></h1>
-            <nav class="site-nav">
-                <a href="index.html" class="current">トップ</a>
-                <a href="about.html">会社概要</a>
-                <a href="service.html">事業・サービス</a>
-                <a href="news.html">ニュース</a>
-                <a href="recruit.html">採用情報</a>
-                <a href="access.html">アクセス</a>
-            </nav>
-            <a href="contact.html" class="header-cta">お問い合わせ</a>
-        </div>
-    </header>
+    <title>AileWell | 通信で、未来をつなぐ</title>
+    <meta name="description" content="AileWellは法人・自治体に通信インフラとデータサービスを提供しています。専用線・クラウド・IoTなど多様なソリューションで社会インフラを支えます。">
 
-    <main>
-        <!-- ヒーロー：トップの大画像（images/hiro.png） -->
-        <section class="hero hero-full hero-synspective">
-            <div class="hero-banner">
-                <img class="hero-img" src="./images/hiro.png" alt="通信インフラ・グローバルネットワーク" width="1920" height="1080" fetchpriority="high">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <h2 class="hero-title">変化する世界を通信インフラを軸に<br>未来を見通す意思決定を</h2>
+    <link rel="stylesheet" href="vendor/fonts/fonts.css">
+
+    <script src="vendor/tailwind/tailwind.min.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: { DEFAULT: '#1d6fd8', dark: '#123d6e', light: '#eff6ff' },
+                    accent: '#3b82f6',
+                    body: '#1e2535',
+                    muted: '#64748b',
+                    surface: '#f5f8fc',
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans JP"', '"Inter"', 'sans-serif'],
+                    display: ['"Inter"', '"Noto Sans JP"', 'sans-serif'],
+                },
+            },
+        },
+    }
+    </script>
+
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="text-body font-sans leading-relaxed relative overflow-x-hidden">
+
+    <header id="site-header"></header>
+
+    <main class="relative z-[1]">
+
+        <!-- ========== HERO ========== -->
+        <section class="hero-gradient relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+            <div class="hero-particle"></div>
+            <div class="network-line"></div>
+            <div class="network-line"></div>
+            <div class="network-line"></div>
+
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center py-20 md:py-32">
+                <p
+                    class="text-white/80 text-sm sm:text-base font-semibold tracking-[0.2em] uppercase mb-6"
+                    data-aos="fade-down"
+                    data-aos-delay="100"
+                >
+                    Communication Infrastructure &amp; Data Service
+                </p>
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+                    変化する世界を<br>
+                    通信インフラを軸に<br>
+                    未来を見通す意思決定を
+                </h1>
+                <p
+                    class="text-white/85 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10"
+                    data-aos="fade-up"
+                    data-aos-delay="350"
+                >
+                    法人・自治体に通信インフラとデータサービスを提供し、<br class="hidden md:inline">
+                    つながる未来を共に創ります。
+                </p>
+                <div
+                    class="flex flex-col sm:flex-row gap-4 justify-center"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                >
+                    <a href="service.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl text-base hover:-translate-y-1 hover:shadow-2xl transition-all duration-200">
+                        サービスを見る
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-bold rounded-xl text-base border-2 border-white/80 hover:bg-white/15 hover:-translate-y-1 transition-all duration-200">
+                        お問い合わせ
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <i class="fa-solid fa-chevron-down text-white/50 text-xl"></i>
+            </div>
+        </section>
+
+        <!-- ========== VALUE PROPOSITION ========== -->
+        <section class="py-16 md:py-24 lg:py-32 bg-white relative z-[1]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-20" data-aos="fade-up">
+                    <p class="text-primary font-semibold text-sm tracking-[0.15em] uppercase mb-3 font-display">Our Strength</p>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-body leading-snug">
+                        通信データを核として切り拓く<br class="hidden sm:inline">つながる未来
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <div class="card-hover bg-surface rounded-2xl p-8 lg:p-10 text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-circle w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
+                            <i class="fa-solid fa-network-wired text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-body mb-3">高品質な通信インフラ</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            昼夜・天候に左右されず、高品質でお客様の通信を支えます。災害時にも強い回線設計と拡張可能なネットワーク。
+                        </p>
+                    </div>
+                    <div class="card-hover bg-surface rounded-2xl p-8 lg:p-10 text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-circle w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
+                            <i class="fa-solid fa-cloud-arrow-up text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-body mb-3">クラウド＆データ活用</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            データサイエンスやクラウドを活用し、通信回線の設計から運用・保守まで一貫してサポートします。
+                        </p>
+                    </div>
+                    <div class="card-hover bg-surface rounded-2xl p-8 lg:p-10 text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-circle w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
+                            <i class="fa-solid fa-shield-halved text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-body mb-3">安心のセキュリティ</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            お客様の課題に合わせ、専用線・クラウド・IoTなど多様なデータを組み合わせた安全なソリューション。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <h2 class="block-title">通信データを核として切り拓く<br>つながる未来</h2>
-                <p class="block-text">私たちは、法人・自治体に通信インフラとデータサービスを提供しています。通信データを活用する企業様にも、当社の回線・プラットフォームをご利用いただけます。</p>
-                <a href="service.html" class="block-link">AileWell サービス →</a>
+        <!-- ========== SERVICES ========== -->
+        <section class="py-16 md:py-24 lg:py-32 bg-surface relative z-[1]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-20" data-aos="fade-up">
+                    <p class="text-primary font-semibold text-sm tracking-[0.15em] uppercase mb-3 font-display">Services</p>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-body leading-snug">
+                        通信インフラで導く<br class="hidden sm:inline">ソリューション
+                    </h2>
+                </div>
+
+                <div class="space-y-12 lg:space-y-20">
+                    <!-- Service 1 -->
+                    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" data-aos="fade-up">
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl aspect-video flex items-center justify-center">
+                                <i class="fa-solid fa-server text-6xl text-primary/30"></i>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <p class="service-num">01</p>
+                            <h3 class="text-xl sm:text-2xl font-bold text-body mb-4">専用線・ネットワーク構築</h3>
+                            <p class="text-muted leading-relaxed mb-6">
+                                お客様の拠点間を結ぶ高品質な専用線サービスを提供。冗長構成や帯域保証により、安定した通信環境を実現します。
+                            </p>
+                            <a href="service.html" class="inline-flex items-center text-primary font-bold hover:gap-3 gap-2 transition-all duration-200">
+                                詳しく見る <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16" data-aos="fade-up">
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl aspect-video flex items-center justify-center">
+                                <i class="fa-solid fa-cloud text-6xl text-accent/30"></i>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <p class="service-num">02</p>
+                            <h3 class="text-xl sm:text-2xl font-bold text-body mb-4">クラウド・データプラットフォーム</h3>
+                            <p class="text-muted leading-relaxed mb-6">
+                                通信データを活用するためのクラウドプラットフォームを提供。データの収集・分析・可視化をワンストップで支援します。
+                            </p>
+                            <a href="service.html" class="inline-flex items-center text-primary font-bold hover:gap-3 gap-2 transition-all duration-200">
+                                詳しく見る <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16" data-aos="fade-up">
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl aspect-video flex items-center justify-center">
+                                <i class="fa-solid fa-microchip text-6xl text-primary/30"></i>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <p class="service-num">03</p>
+                            <h3 class="text-xl sm:text-2xl font-bold text-body mb-4">IoT・スマートソリューション</h3>
+                            <p class="text-muted leading-relaxed mb-6">
+                                IoTデバイスと通信回線を組み合わせ、遠隔監視・制御・データ収集を実現。スマートシティや産業DXを推進します。
+                            </p>
+                            <a href="service.html" class="inline-flex items-center text-primary font-bold hover:gap-3 gap-2 transition-all duration-200">
+                                詳しく見る <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="block block-white">
-            <div class="block-inner">
-                <h2 class="block-title">通信インフラで導く<br>ソリューション</h2>
-                <p class="block-text">データサイエンスやクラウドを活用し、通信回線の設計から運用・保守まで一貫してサポート。お客様の課題に合わせ、専用線・クラウド・IoT など多様なデータを組み合わせたソリューションを提供します。</p>
-                <a href="service.html" class="block-link">サービス一覧 →</a>
+        <!-- ========== NUMBERS ========== -->
+        <section class="py-16 md:py-24 lg:py-32 bg-white relative z-[1]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-20" data-aos="fade-up">
+                    <p class="text-primary font-semibold text-sm tracking-[0.15em] uppercase mb-3 font-display">By the Numbers</p>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-body">数字で見る AileWell</h2>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    <div class="text-center p-6 lg:p-8" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-4xl sm:text-5xl font-extrabold font-display gradient-text mb-2">
+                            <span data-count="500">0</span><span class="text-2xl">+</span>
+                        </p>
+                        <p class="text-muted text-sm font-medium">導入企業数</p>
+                    </div>
+                    <div class="text-center p-6 lg:p-8" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-4xl sm:text-5xl font-extrabold font-display gradient-text mb-2">
+                            <span data-count="99">0</span><span class="text-2xl">.9%</span>
+                        </p>
+                        <p class="text-muted text-sm font-medium">稼働率</p>
+                    </div>
+                    <div class="text-center p-6 lg:p-8" data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-4xl sm:text-5xl font-extrabold font-display gradient-text mb-2">
+                            <span data-count="47">0</span>
+                        </p>
+                        <p class="text-muted text-sm font-medium">対応都道府県</p>
+                    </div>
+                    <div class="text-center p-6 lg:p-8" data-aos="fade-up" data-aos-delay="400">
+                        <p class="text-4xl sm:text-5xl font-extrabold font-display gradient-text mb-2">
+                            <span>24</span><span class="text-2xl">/365</span>
+                        </p>
+                        <p class="text-muted text-sm font-medium">監視・サポート体制</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <h2 class="block-title">安定した通信基盤</h2>
-                <p class="block-text">昼夜・天候に左右されず、高品質でお客様の通信を支えます。災害時にも強い回線設計と、拡張可能なネットワークで、社会インフラを支えています。</p>
-                <a href="about.html" class="block-link">会社概要 →</a>
+        <!-- ========== NEWS ========== -->
+        <section class="py-16 md:py-24 lg:py-32 bg-surface relative z-[1]">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 md:mb-14" data-aos="fade-up">
+                    <div>
+                        <p class="text-primary font-semibold text-sm tracking-[0.15em] uppercase mb-3 font-display">Latest News</p>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-body">ニュース</h2>
+                    </div>
+                    <a href="news.html" class="inline-flex items-center text-primary font-bold text-sm hover:gap-3 gap-2 transition-all duration-200">
+                        すべて見る <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="#" class="news-card block bg-white rounded-xl p-5 sm:p-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+                            <div class="flex items-center gap-3 shrink-0">
+                                <time class="text-muted text-sm font-display">2026.02.07</time>
+                                <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">お知らせ</span>
+                            </div>
+                            <p class="text-body font-medium text-sm sm:text-base">公式サイトをオープンしました。</p>
+                        </div>
+                    </a>
+                    <a href="#" class="news-card block bg-white rounded-xl p-5 sm:p-6" data-aos="fade-up" data-aos-delay="150">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+                            <div class="flex items-center gap-3 shrink-0">
+                                <time class="text-muted text-sm font-display">2026.02.01</time>
+                                <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">お知らせ</span>
+                            </div>
+                            <p class="text-body font-medium text-sm sm:text-base">ニュースのタイトルをここに記載します。</p>
+                        </div>
+                    </a>
+                    <a href="#" class="news-card block bg-white rounded-xl p-5 sm:p-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+                            <div class="flex items-center gap-3 shrink-0">
+                                <time class="text-muted text-sm font-display">2026.01.15</time>
+                                <span class="text-xs font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">プレスリリース</span>
+                            </div>
+                            <p class="text-body font-medium text-sm sm:text-base">プレスリリースやメディア掲載のタイトルを記載します。</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="block block-news">
-            <div class="block-inner block-news-inner">
-                <h2 class="block-title block-news-title">LATEST NEWS</h2>
-                <ul class="top-news-list">
-                    <li class="top-news-item">
-                        <a href="#">
-                            <span class="top-news-title">公式サイトをオープンしました。</span>
-                            <span class="top-news-meta">2026.02.07　お知らせ</span>
-                        </a>
-                    </li>
-                    <li class="top-news-item">
-                        <a href="#">
-                            <span class="top-news-title">ニュースのタイトルをここに記載します。</span>
-                            <span class="top-news-meta">2026.02.01　お知らせ</span>
-                        </a>
-                    </li>
-                    <li class="top-news-item">
-                        <a href="#">
-                            <span class="top-news-title">プレスリリースやメディア掲載のタイトルを記載します。</span>
-                            <span class="top-news-meta">2026.01.15　プレスリリース</span>
-                        </a>
-                    </li>
-                </ul>
-                <a href="news.html" class="block-link">もっと見る →</a>
+        <!-- ========== CTA ========== -->
+        <section class="cta-gradient py-16 md:py-24 lg:py-32 relative z-[1]">
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2
+                    class="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-snug mb-6"
+                    data-aos="fade-up"
+                >
+                    通信インフラのことなら<br class="hidden sm:inline">お気軽にご相談ください
+                </h2>
+                <p class="text-white/80 text-base sm:text-lg mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    お客様の課題やご要望をお聞かせください。<br class="hidden sm:inline">
+                    最適なソリューションをご提案いたします。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl text-base hover:-translate-y-1 hover:shadow-2xl transition-all duration-200">
+                        <i class="fa-solid fa-envelope mr-2"></i>
+                        お問い合わせ
+                    </a>
+                    <a href="about.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-bold rounded-xl text-base border-2 border-white/70 hover:bg-white/15 hover:-translate-y-1 transition-all duration-200">
+                        会社概要を見る
+                    </a>
+                </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">AileWell</a>
-                    <p class="footer-tagline">通信で、未来をつなぐ</p>
-                </div>
-                <nav class="footer-nav">
-                    <div class="footer-col">
-                        <span class="footer-col-title">企業情報</span>
-                        <a href="about.html">会社概要</a>
-                        <a href="service.html">事業・サービス</a>
-                        <a href="news.html">ニュース</a>
-                        <a href="recruit.html">採用情報</a>
-                        <a href="access.html">アクセス</a>
-                    </div>
-                    <div class="footer-col">
-                        <span class="footer-col-title">お問い合わせ</span>
-                        <a href="contact.html">お問い合わせ</a>
-                        <a href="privacy.html">プライバシーポリシー</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copy">&copy; AileWell. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer id="site-footer"></footer>
+
+    <script defer src="js/components.js"></script>
+    <script defer src="vendor/alpinejs/cdn.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

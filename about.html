@@ -3,108 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>会社概要 | AileWell.com</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>会社概要 | AileWell</title>
+    <meta name="description" content="株式会社AileWellの会社概要です。通信インフラで人と社会をつなぐ私たちのビジョンと会社情報をご紹介します。">
+    <link rel="stylesheet" href="vendor/fonts/fonts.css">
+    <script src="vendor/tailwind/tailwind.min.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: { DEFAULT: '#1d6fd8', dark: '#123d6e', light: '#eff6ff' },
+                    accent: '#3b82f6',
+                    body: '#1e2535',
+                    muted: '#64748b',
+                    surface: '#f5f8fc',
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans JP"', '"Inter"', 'sans-serif'],
+                    display: ['"Inter"', '"Noto Sans JP"', 'sans-serif'],
+                },
+            },
+        },
+    }
+    </script>
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="page-about">
-    <header class="site-header">
-        <div class="header-inner">
-            <h1 class="site-title"><a href="index.html">AileWell</a></h1>
-            <nav class="site-nav">
-                <a href="index.html">トップ</a>
-                <a href="about.html" class="current">会社概要</a>
-                <a href="service.html">事業・サービス</a>
-                <a href="news.html">ニュース</a>
-                <a href="recruit.html">採用情報</a>
-                <a href="access.html">アクセス</a>
-            </nav>
-            <a href="contact.html" class="header-cta">お問い合わせ</a>
-        </div>
-    </header>
+<body class="text-body font-sans leading-relaxed relative overflow-x-hidden">
 
-    <main class="main">
-        <header class="page-hero">
-            <div class="page-hero-inner">
-                <h1 class="page-hero-title">会社概要</h1>
-                <p class="page-hero-sub">About</p>
-            </div>
-        </header>
+    <header id="site-header"></header>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <figure class="section-figure">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=960&q=80" alt="グローバルネットワーク・通信" width="960" height="400">
-                    <figcaption>私たちは通信インフラで、人と社会をつなぎます。</figcaption>
-                </figure>
+    <main class="relative z-[1]">
+
+        <!-- PAGE HERO -->
+        <section class="cta-gradient relative overflow-hidden pt-16 lg:pt-[72px]">
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+                <p class="text-blue-200/50 text-xs font-bold tracking-[0.25em] uppercase mb-4 font-display" data-aos="fade-up">About</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="100">会社概要</h1>
+                <p class="text-white/60 mt-4 text-base md:text-lg" data-aos="fade-up" data-aos-delay="200">私たちは通信インフラで、人と社会をつなぎます。</p>
             </div>
         </section>
 
-        <section class="block block-white">
-            <div class="block-inner">
-                <h3>会社名</h3>
-                <p>株式会社 AileWell（エイルウェル）</p>
+        <!-- VISION -->
+        <section class="py-10 md:py-14 lg:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                    <p class="text-primary font-semibold text-sm tracking-[0.15em] uppercase mb-3 font-display">Vision</p>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-body leading-snug">理念・ビジョン</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-center p-6">
+                        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
+                            <i class="fa-solid fa-earth-asia text-xl text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-body mb-2">つながる社会</h3>
+                        <p class="text-muted text-sm leading-relaxed">通信インフラを基盤に、人・企業・社会のあらゆるつながりを支えます。</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
+                            <i class="fa-solid fa-lightbulb text-xl text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-body mb-2">革新への挑戦</h3>
+                        <p class="text-muted text-sm leading-relaxed">データとテクノロジーを組み合わせ、お客様の課題を解決する革新的なソリューションを追求します。</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center">
+                            <i class="fa-solid fa-handshake text-xl text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-body mb-2">信頼のパートナー</h3>
+                        <p class="text-muted text-sm leading-relaxed">法人・自治体のお客様に寄り添い、長期的な信頼関係を築くことを大切にしています。</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <h3>理念・ビジョン</h3>
-                <p>ここに会社の理念やビジョンを記載してください。お客様や社会にどのような価値を届けたいか、簡潔に書くと伝わりやすくなります。</p>
+        <!-- COMPANY INFO -->
+        <section class="py-10 md:py-14 lg:py-20 bg-surface">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12" data-aos="fade-up">
+                    <p class="text-primary font-semibold text-sm tracking-[0.15em] uppercase mb-3 font-display">Company</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-body">会社情報</h2>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <dl>
+                        <div class="flex flex-col sm:flex-row border-b border-surface">
+                            <dt class="sm:w-48 shrink-0 px-6 py-5 text-sm font-bold text-body bg-surface/60">会社名</dt>
+                            <dd class="px-6 py-5 text-muted text-sm">株式会社 AileWell（エイルウェル）</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row border-b border-surface">
+                            <dt class="sm:w-48 shrink-0 px-6 py-5 text-sm font-bold text-body bg-surface/60">設立</dt>
+                            <dd class="px-6 py-5 text-muted text-sm">〇〇年〇月（実際の設立日を記入してください）</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row border-b border-surface">
+                            <dt class="sm:w-48 shrink-0 px-6 py-5 text-sm font-bold text-body bg-surface/60">所在地</dt>
+                            <dd class="px-6 py-5 text-muted text-sm">〒XXX-XXXX 〇〇県〇〇市〇〇 〇-〇-〇<br>（実際の住所を記入してください）</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row border-b border-surface">
+                            <dt class="sm:w-48 shrink-0 px-6 py-5 text-sm font-bold text-body bg-surface/60">代表者</dt>
+                            <dd class="px-6 py-5 text-muted text-sm">代表取締役 〇〇 〇〇</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row border-b border-surface">
+                            <dt class="sm:w-48 shrink-0 px-6 py-5 text-sm font-bold text-body bg-surface/60">事業内容</dt>
+                            <dd class="px-6 py-5 text-muted text-sm">通信インフラ・データサービスの提供<br>インターネット回線、専用線、クラウド連携サービス</dd>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <dt class="sm:w-48 shrink-0 px-6 py-5 text-sm font-bold text-body bg-surface/60">資本金</dt>
+                            <dd class="px-6 py-5 text-muted text-sm">〇〇〇万円（実際の金額を記入してください）</dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
         </section>
 
-        <section class="block block-white">
-            <div class="block-inner">
-                <h3>事業内容</h3>
-                <p>主に通信事業を展開しています。インターネット回線・通信インフラ・クラウド連携など、お客様の「つながり」を支えるサービスを提供しています。</p>
+        <!-- CTA -->
+        <section class="cta-gradient py-12 md:py-16 relative">
+            <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6" data-aos="fade-up">お気軽にご相談ください</h2>
+                <p class="text-white/70 mb-8" data-aos="fade-up" data-aos-delay="100">サービスや会社についてのご質問はお問い合わせよりどうぞ。</p>
+                <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-200" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-envelope mr-2"></i> お問い合わせ
+                </a>
             </div>
         </section>
 
-        <section class="block block-light">
-            <div class="block-inner">
-                <h3>会社情報</h3>
-                <dl>
-                    <dt>設立</dt>
-                    <dd>〇〇年〇月（実際の設立日を記入してください）</dd>
-                    <dt>所在地</dt>
-                    <dd>〒XXX-XXXX 〇〇県〇〇市〇〇 〇-〇-〇（実際の住所を記入してください）</dd>
-                    <dt>代表者</dt>
-                    <dd>代表取締役 〇〇 〇〇（実際の氏名を記入してください）</dd>
-                </dl>
-            </div>
-        </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">AileWell</a>
-                    <p class="footer-tagline">通信で、未来をつなぐ</p>
-                </div>
-                <nav class="footer-nav">
-                    <div class="footer-col">
-                        <span class="footer-col-title">企業情報</span>
-                        <a href="about.html">会社概要</a>
-                        <a href="service.html">事業・サービス</a>
-                        <a href="news.html">ニュース</a>
-                        <a href="recruit.html">採用情報</a>
-                        <a href="access.html">アクセス</a>
-                    </div>
-                    <div class="footer-col">
-                        <span class="footer-col-title">お問い合わせ</span>
-                        <a href="contact.html">お問い合わせ</a>
-                        <a href="privacy.html">プライバシーポリシー</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copy">&copy; AileWell. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer id="site-footer"></footer>
+
+    <script defer src="js/components.js"></script>
+    <script defer src="vendor/alpinejs/cdn.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
