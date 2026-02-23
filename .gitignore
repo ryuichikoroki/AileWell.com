@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Exclude duplicate/temp folder (contains nested repo)
+名称未設定/
+
+# Thumbnails
+._*
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Optional: uncomment if you use local env files
+# .env
+# .env.local

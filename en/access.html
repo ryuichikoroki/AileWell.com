@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access | AileWell</title>
+    <meta name="description" content="Access information for AileWell Inc. Location and directions.">
+    <link rel="stylesheet" href="../vendor/fonts/fonts.css">
+    <script src="../vendor/tailwind/tailwind.min.js"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: { DEFAULT: '#1d6fd8', dark: '#123d6e', light: '#eff6ff' },
+                    accent: '#3b82f6',
+                    body: '#1e2535',
+                    muted: '#64748b',
+                    surface: '#f5f8fc',
+                },
+                fontFamily: {
+                    sans: ['"Noto Sans JP"', '"Inter"', 'sans-serif'],
+                    display: ['"Inter"', '"Noto Sans JP"', 'sans-serif'],
+                },
+            },
+        },
+    }
+    </script>
+    <link href="../vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/fontawesome/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body class="text-body font-sans leading-relaxed relative overflow-x-hidden">
+
+    <header id="site-header"></header>
+
+    <main class="relative z-[1]">
+
+        <section class="cta-gradient relative overflow-hidden pt-16 lg:pt-[72px]">
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+                <p class="text-blue-200/50 text-xs font-bold tracking-[0.25em] uppercase mb-4 font-display" data-aos="fade-up">Access</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight" data-aos="fade-up" data-aos-delay="100">Access</h1>
+            </div>
+        </section>
+
+        <section class="py-10 md:py-14 lg:py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div data-aos="fade-up">
+                        <div class="mb-10">
+                            <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-primary"></i> Address
+                            </h2>
+                            <div class="bg-surface rounded-xl p-6 text-sm text-muted leading-relaxed">
+                                A&NI Building 06<br>
+                                1-16-31 Chuo, Ebina-shi, Kanagawa 243-0342, Japan
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
+                                <i class="fa-solid fa-train text-primary"></i> Directions
+                            </h2>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-sm text-muted">
+                                    <i class="fa-solid fa-circle text-primary/40 text-[6px] mt-2 shrink-0"></i>
+                                    About 3 min. on foot from Sagami Railway Ebina Station North Exit
+                                </li>
+                                <li class="flex items-start gap-3 text-sm text-muted">
+                                    <i class="fa-solid fa-circle text-primary/40 text-[6px] mt-2 shrink-0"></i>
+                                    About 5 min. on foot from Odakyu Line Ebina Station East Exit
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 p-5 rounded-xl border border-primary/15 bg-primary/5">
+                            <p class="text-sm font-bold text-body mb-1">
+                                <i class="fa-solid fa-circle-info text-primary mr-2"></i> Visiting us
+                            </p>
+                            <p class="text-sm text-muted">Please contact us in advance if you plan to visit.</p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
+                            <i class="fa-solid fa-map text-primary"></i> Map
+                        </h2>
+                        <div class="bg-surface rounded-2xl overflow-hidden border border-body/5">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203.1239385048371!2d139.3951549136225!3d35.455214897631095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601855dd2e1298c9%3A0x16f561cffdb2c35!2zQklaY29tZm9ydOa1t-iAgeWQjQ!5e0!3m2!1sja!2sjp!4v1771825206126!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AileWell location"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-gradient py-12 md:py-16 relative">
+            <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-6" data-aos="fade-up">Contact</h2>
+                <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-200" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-envelope mr-2"></i> Contact
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script defer src="js/components.js"></script>
+    <script defer src="../vendor/alpinejs/cdn.min.js"></script>
+    <script src="../vendor/aos/aos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
