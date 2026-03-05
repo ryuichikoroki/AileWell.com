@@ -17,7 +17,11 @@
                 <a href="service.html" data-nav="service.html" class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">Services</a>
                 <a href="news.html"    data-nav="news.html"    class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">News</a>
                 <a href="access.html"  data-nav="access.html"  class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">Access</a>
-                <a href="../index.html" class="px-4 py-2 text-sm font-medium text-white/70 rounded-lg hover:bg-white/10 transition-colors">日本語</a>
+                <span class="flex items-center gap-1 px-2 text-sm font-medium" aria-label="Language">
+                    <a href="../index.html" class="text-white/70 hover:text-white transition-colors">JP</a>
+                    <span class="text-white/40">|</span>
+                    <span class="text-white">EN</span>
+                </span>
             </nav>
             <div class="flex items-center gap-3">
                 <a href="contact.html" class="hidden sm:inline-flex items-center px-5 py-2.5 bg-white text-[#1d6fd8] text-sm font-bold rounded-lg hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">Contact</a>
@@ -44,7 +48,11 @@
             <a href="service.html" data-nav-m="service.html" class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">Services</a>
             <a href="news.html"    data-nav-m="news.html"    class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">News</a>
             <a href="access.html"  data-nav-m="access.html"  class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">Access</a>
-            <a href="../index.html" class="px-4 py-3 text-white/70 font-medium rounded-lg hover:bg-white/10 transition-colors">日本語</a>
+            <span class="flex items-center gap-2 px-4 py-3 text-sm font-medium">
+                <a href="../index.html" class="text-white/70 hover:text-white transition-colors">JP</a>
+                <span class="text-white/40">|</span>
+                <span class="text-white">EN</span>
+            </span>
             <a href="contact.html" class="sm:hidden mt-2 px-4 py-3 bg-white text-[#1d6fd8] font-bold rounded-lg text-center">Contact</a>
         </nav>
     </div>

@@ -20,7 +20,11 @@
                 <a href="recruit.html" data-nav="recruit.html" class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">採用情報</a>
                 -->
                 <a href="access.html"  data-nav="access.html"  class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">アクセス</a>
-                <a href="en/index.html" class="px-4 py-2 text-sm font-medium text-white/70 rounded-lg hover:bg-white/10 transition-colors">English</a>
+                <span class="flex items-center gap-1 px-2 text-sm font-medium" aria-label="言語切り替え">
+                    <span class="text-white">JP</span>
+                    <span class="text-white/40">|</span>
+                    <a href="en/index.html" class="text-white/70 hover:text-white transition-colors">EN</a>
+                </span>
             </nav>
             <div class="flex items-center gap-3">
                 <a href="contact.html" class="hidden sm:inline-flex items-center px-5 py-2.5 bg-white text-[#1d6fd8] text-sm font-bold rounded-lg hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200">お問い合わせ</a>
@@ -50,7 +54,11 @@
             <a href="recruit.html" data-nav-m="recruit.html" class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">採用情報</a>
             -->
             <a href="access.html"  data-nav-m="access.html"  class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">アクセス</a>
-            <a href="en/index.html" class="px-4 py-3 text-white/70 font-medium rounded-lg hover:bg-white/10 transition-colors">English</a>
+            <span class="flex items-center gap-2 px-4 py-3 text-sm font-medium">
+                <span class="text-white">JP</span>
+                <span class="text-white/40">|</span>
+                <a href="en/index.html" class="text-white/70 hover:text-white transition-colors">EN</a>
+            </span>
             <a href="contact.html" class="sm:hidden mt-2 px-4 py-3 bg-white text-[#1d6fd8] font-bold rounded-lg text-center">お問い合わせ</a>
         </nav>
     </div>
