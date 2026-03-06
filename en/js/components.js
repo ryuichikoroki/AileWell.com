@@ -16,6 +16,9 @@
                 <a href="about.html"   data-nav="about.html"   class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">About</a>
                 <a href="service.html" data-nav="service.html" class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">Services</a>
                 <a href="news.html"    data-nav="news.html"    class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">News</a>
+                <!-- Careers (hidden for now)
+                <a href="recruit.html" data-nav="recruit.html" class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">Careers</a>
+                -->
                 <a href="access.html"  data-nav="access.html"  class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">Access</a>
                 <span class="flex items-center gap-1 px-2 text-sm font-medium" aria-label="Language">
                     <a href="../index.html" class="text-white/70 hover:text-white transition-colors">JP</a>
@@ -47,6 +50,9 @@
             <a href="about.html"   data-nav-m="about.html"   class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">About</a>
             <a href="service.html" data-nav-m="service.html" class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">Services</a>
             <a href="news.html"    data-nav-m="news.html"    class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">News</a>
+            <!-- Careers (hidden for now)
+            <a href="recruit.html" data-nav-m="recruit.html" class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">Careers</a>
+            -->
             <a href="access.html"  data-nav-m="access.html"  class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">Access</a>
             <span class="flex items-center gap-2 px-4 py-3 text-sm font-medium">
                 <a href="../index.html" class="text-white/70 hover:text-white transition-colors">JP</a>
@@ -72,6 +78,9 @@
                     <a href="about.html"   class="text-white/75 text-sm hover:text-white transition-colors">About</a>
                     <a href="service.html" class="text-white/75 text-sm hover:text-white transition-colors">Services</a>
                     <a href="news.html"    class="text-white/75 text-sm hover:text-white transition-colors">News</a>
+                    <!-- Careers (hidden for now)
+                    <a href="recruit.html" class="text-white/75 text-sm hover:text-white transition-colors">Careers</a>
+                    -->
                 </nav>
             </div>
             <div>
