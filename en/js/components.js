@@ -70,7 +70,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 md:pb-16 border-b border-white/10">
             <div class="lg:col-span-1">
                 <a href="index.html" class="text-xl font-bold text-white font-display">AileWell</a>
-                <p class="text-white/50 text-sm mt-2">Connecting the future through communication</p>
+                <p class="text-white/50 text-sm mt-2">Building tomorrow's connected infrastructure</p>
             </div>
             <div>
                 <p class="text-xs font-bold tracking-[0.15em] text-white/40 uppercase mb-4">Company</p>
@@ -95,7 +95,7 @@
                 <p class="text-xs font-bold tracking-[0.15em] text-white/40 uppercase mb-4">Contact</p>
                 <div class="flex flex-col gap-3 text-sm text-white/75">
                     <a href="contact.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
-                        <i class="fa-solid fa-envelope text-xs"></i> Contact
+                        <i class="fa-solid fa-envelope text-xs"></i> Get in Touch
                     </a>
                 </div>
             </div>
