@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ailewell.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/about.html" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/service.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/service.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/service.html" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/news.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/news.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/news.html" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/access.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/access.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/access.html" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/contact.html" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/privacy.html" />
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/about.html" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/en/service.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/service.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/service.html" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/en/news.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/news.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/news.html" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/en/access.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/access.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/access.html" />
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/contact.html" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ailewell.com/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ailewell.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailewell.com/en/privacy.html" />
+    <priority>0.3</priority>
+  </url>
+</urlset>
