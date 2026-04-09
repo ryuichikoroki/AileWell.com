@@ -1,6 +1,11 @@
 'use strict';
 
 (function () {
+    var fl = document.createElement('link');
+    fl.rel = 'stylesheet';
+    fl.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap&text=AileW';
+    document.head.appendChild(fl);
+
     const HEADER = `
 <header x-data="{ open: false }" data-header
     class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md text-white transition-all duration-300"
@@ -9,16 +14,13 @@
         <div class="flex items-center justify-between h-16 lg:h-[72px]">
             <a href="index.html" class="flex items-center gap-2 shrink-0">
                 <img src="assets/images/logo-mark.png" alt="AileWell 会社ロゴ" class="h-8 object-contain">
-                <span class="text-xl lg:text-2xl font-bold tracking-wide font-display">AileWell</span>
+                <span class="text-xl lg:text-2xl font-bold tracking-wide" style="font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;letter-spacing:0.04em">AileWell</span>
             </a>
             <nav class="hidden lg:flex items-center gap-1">
                 <a href="index.html"   data-nav="index.html"   class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">トップ</a>
                 <a href="about.html"   data-nav="about.html"   class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">会社概要</a>
                 <a href="service.html" data-nav="service.html" class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">事業・サービス</a>
                 <a href="news.html"    data-nav="news.html"    class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">ニュース</a>
-                <!-- 採用情報は一旦非表示（コメントアウト）
-                <a href="recruit.html" data-nav="recruit.html" class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">採用情報</a>
-                -->
                 <a href="access.html"  data-nav="access.html"  class="nav-link-effect px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors">アクセス</a>
                 <span class="flex items-center gap-1 px-2 text-sm font-medium" aria-label="言語切り替え">
                     <span class="text-white">JP</span>
@@ -50,9 +52,6 @@
             <a href="about.html"   data-nav-m="about.html"   class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">会社概要</a>
             <a href="service.html" data-nav-m="service.html" class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">事業・サービス</a>
             <a href="news.html"    data-nav-m="news.html"    class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">ニュース</a>
-            <!-- 採用情報は一旦非表示（コメントアウト）
-            <a href="recruit.html" data-nav-m="recruit.html" class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">採用情報</a>
-            -->
             <a href="access.html"  data-nav-m="access.html"  class="px-4 py-3 text-white/90 font-medium rounded-lg hover:bg-white/10 transition-colors">アクセス</a>
             <span class="flex items-center gap-2 px-4 py-3 text-sm font-medium">
                 <span class="text-white">JP</span>
@@ -69,7 +68,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-20">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 md:pb-16 border-b border-white/10">
             <div class="lg:col-span-1">
-                <a href="index.html" class="text-xl font-bold text-white font-display">AileWell</a>
+                <a href="index.html" class="text-xl font-bold text-white" style="font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;letter-spacing:0.04em">AileWell</a>
                 <p class="text-white/50 text-sm mt-2">通信で、未来をつなぐ</p>
             </div>
             <div>
@@ -78,9 +77,6 @@
                     <a href="about.html"   class="text-white/75 text-sm hover:text-white transition-colors">会社概要</a>
                     <a href="service.html" class="text-white/75 text-sm hover:text-white transition-colors">事業・サービス</a>
                     <a href="news.html"    class="text-white/75 text-sm hover:text-white transition-colors">ニュース</a>
-                    <!-- 採用情報は一旦非表示（コメントアウト）
-                    <a href="recruit.html" class="text-white/75 text-sm hover:text-white transition-colors">採用情報</a>
-                    -->
                 </nav>
             </div>
             <div>
@@ -101,7 +97,7 @@
             </div>
         </div>
         <div class="py-6 md:py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-white/40 text-xs">&copy; AileWell. All Rights Reserved.</p>
+            <p class="text-white/40 text-xs">&copy; <span id="cr-year"></span> AileWell. All Rights Reserved.</p>
             <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
                 class="text-white/40 hover:text-white/70 transition-colors text-xs flex items-center gap-1"
                 aria-label="ページトップに戻る">
@@ -133,4 +129,7 @@
             a.style.color = 'rgba(255,255,255,1)';
         }
     });
+
+    var yr = document.getElementById('cr-year');
+    if (yr) yr.textContent = new Date().getFullYear();
 })();
