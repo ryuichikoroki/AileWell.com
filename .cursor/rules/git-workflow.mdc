@@ -1,0 +1,9 @@
+---
+description: Git commit and push workflow rules
+alwaysApply: true
+---
+
+# Git Workflow
+
+- **コミットとプッシュはユーザーが手動で行う。AIは絶対に `git commit` や `git push` を実行しない。**
+- ファイルの編集のみを行い、Git操作には一切触れないこと。
