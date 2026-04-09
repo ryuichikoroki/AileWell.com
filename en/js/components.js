@@ -8,7 +8,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-[72px]">
             <a href="index.html" class="flex items-center gap-2 shrink-0">
-                <img src="../assets/images/light%20blue%20-%20mark.jpg" alt="AileWell logo" class="h-8 object-contain">
+                <img src="../assets/images/logo-mark.png" alt="AileWell logo" class="h-8 object-contain">
                 <span class="text-xl lg:text-2xl font-bold tracking-wide font-display">AileWell</span>
             </a>
             <nav class="hidden lg:flex items-center gap-1">
