@@ -1,0 +1,36 @@
+---
+description: HTML ファイル編集時のルール
+globs: "**/*.html"
+alwaysApply: false
+---
+
+# HTML 編集ルール
+
+## head セクションの順序
+1. `<meta charset="UTF-8">`
+2. `<meta name="viewport">`
+3. `<meta http-equiv="Content-Security-Policy">` — CSP
+4. `<meta name="referrer">` — Referrer-Policy
+5. `<title>`
+6. `<meta name="description">`
+7. OGP タグ（`og:title`, `og:description`, `og:type`, `og:url`, `og:image`, `og:site_name`）
+8. `<link rel="alternate" hreflang>`
+9. `<link rel="icon">`, `<link rel="apple-touch-icon">`
+10. CSS / JS 読み込み
+
+## スクリプト読み込み順（body 末尾）
+```html
+<script defer src="js/components.js"></script>
+<script defer src="vendor/alpinejs/cdn.min.js"></script>
+<script src="vendor/aos/aos.js"></script>
+<script src="js/main.js"></script>
+```
+
+## カラーパレット（Tailwind config）
+- primary: `#1d6fd8` / dark: `#123d6e` / light: `#eff6ff`
+- accent: `#3b82f6`、body: `#1e2535`、muted: `#64748b`、surface: `#f5f8fc`
+
+## レスポンシブ
+- モバイルファースト設計
+- ブレークポイント: sm:640px / md:768px / lg:1024px / xl:1280px
+- タッチ領域: 最小 44x44px

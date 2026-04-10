@@ -1,0 +1,32 @@
+---
+description: AileWell コーポレートサイトの開発規約・構成ルール
+alwaysApply: true
+---
+
+# AileWell プロジェクト規約
+
+## サイト構成
+- 静的HTML（ビルドツール不使用）、GitHub Pages でホスティング
+- 日本語版: ルート（`/`）、英語版: `/en/`
+- ヘッダー・フッターは `js/components.js`（JA）/ `en/js/components.js`（EN）で一元管理
+- ライブラリは `vendor/` にローカル格納
+
+## 技術スタック
+- Tailwind CSS（Play CDN, ランタイム）、Alpine.js 3.14.3、AOS 2.x、Font Awesome 6.5.1
+- フォント: Noto Sans JP + Inter（ローカル）、Cormorant Garamond（Google Fonts, ロゴ用）、Yuji Syuku（Google Fonts, 企業理念用）
+- フォーム: Formspree（`https://formspree.io/f/mzdjbplp`）
+
+## 編集時の必須ルール
+1. JA版を変更したら必ずEN版（`/en/`）も同様に変更する
+2. `components.js` を変更したら `en/js/components.js` も同様に変更する
+3. Tailwind config（`tailwind.config`）は全ページで同一にする
+4. 画像追加時は `assets/images/` に配置。`alt` 属性必須
+5. 新ページ追加時は `sitemap.xml`、`hreflang`タグ、ナビゲーション（`components.js`）も更新する
+6. セキュリティ: 新ページには CSP と Referrer-Policy の meta タグを含める
+
+## 禁止事項
+- ビルドツール（npm / webpack / Vite）の使用
+- jQuery の使用
+- Font Awesome の `fa-brain` アイコン
+- 外部CDNからのライブラリ読込（Google Fonts以外）
+- 不要な説明的コメント

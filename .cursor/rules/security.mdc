@@ -1,0 +1,23 @@
+---
+description: セキュリティ関連のルール
+alwaysApply: true
+---
+
+# セキュリティルール
+
+## CSP（Content Security Policy）
+全ページの `<head>` に以下の CSP meta タグを含めること:
+```
+default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval';
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+img-src 'self' data:;
+frame-src https://www.google.com https://www.google.co.jp;
+connect-src 'self' https://formspree.io;
+object-src 'none'; base-uri 'self';
+```
+
+## 新しい外部リソースを追加する場合
+1. CSP ディレクティブに該当ドメインを追加する
+2. 可能であれば `vendor/` にローカル配置する
+3. `target="_blank"` を使用する場合は `rel="noopener noreferrer"` を付与する
