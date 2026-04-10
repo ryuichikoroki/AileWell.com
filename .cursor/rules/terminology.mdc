@@ -1,0 +1,30 @@
+---
+description: AileWell サイトで使用する正式な用語・表記ルール
+alwaysApply: true
+---
+
+# 用語統一ルール
+
+コンテンツ編集時は以下の正式表記を使用すること。
+
+## 会社名
+- 正: `AileWell株式会社`（カタカナ読み: エルウェル）
+- 英: `AileWell Co., Ltd.`
+- ロゴ表記: `AileWell`（W は大文字）
+
+## 事業用語（日本語）
+- 正: `通信インフラ` ← 誤: `情報インフラ`
+- 正: `通信インフラ構築` ← 誤: `情報インフラ構築`
+- 正: `配線設計` ← 誤: `回線設計`
+
+## 事業用語（英語）
+- 正: `communication infrastructure` ← 誤: `IT infrastructure`
+- 正: `Communication Infrastructure Sales & Deployment`
+- 正: `cabling design` ← 誤: `wiring design`
+
+## 所在地
+- `神奈川県海老名市中央1-16-31 A&NIビル06`
+- 「本社」とは記載しない
+
+## 取引先表記
+- コーニング**ジャパン**（株）← 誤: コーニング**インターナショナル**（株）
