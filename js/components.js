@@ -113,7 +113,6 @@
     const footerEl = document.getElementById('site-footer');
     if (footerEl) footerEl.outerHTML = FOOTER;
 
-    // アクティブなナビリンクを現在のページに基づいてマーク
     const current = location.pathname.split('/').pop() || 'index.html';
 
     document.querySelectorAll('[data-nav]').forEach(a => {
