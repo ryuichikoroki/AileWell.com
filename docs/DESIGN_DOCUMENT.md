@@ -463,7 +463,6 @@ python3 -m http.server 8080
 
 | 項目 | 内容 | 優先度 |
 |------|------|--------|
-| 代表写真 | `about.html` の代表紹介に実際の写真を設置 | 高 |
 | 代表コメント | 代表挨拶の本文を正式な内容に差し替え | 高 |
 | トップページ数値 | 「500+」「99.9%」等の実績数値を実態と照合 | 中 |
 | 取り扱い製品 | 事業・サービスページに製品情報を追加 | 中 |
@@ -491,6 +490,7 @@ python3 -m http.server 8080
 | `light blue - tategumi2.jpg` | 縦組みロゴ2 |
 | `Gemini_Generated_Image_c3txqc...png` | サービスページ画像1 |
 | `Gemini_Generated_Image_x84sj...png` | サービスページ画像2 |
+| `koroki-yoshiharu.png` | 代表取締役 宣材写真（about ページ） |
 
 ---
 
@@ -500,3 +500,4 @@ python3 -m http.server 8080
 |------|------|
 | 2026/02/23 | 初版作成。要件ヒアリング、ページ構成、デザインガイドライン策定 |
 | 2026/04/10 | v2.0: 全ドキュメント統合。セキュリティ（CSP・Referrer-Policy）、SEO（hreflang・OGP）、多言語対応、コーディング規約、フォーム仕様を追記 |
+| 2026/04/20 | 代表取締役 宣材写真（`koroki-yoshiharu.png`）を about ページに反映 |
