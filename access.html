@@ -67,15 +67,26 @@
                             <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
                                 <i class="fa-solid fa-location-dot text-primary"></i> 所在地
                             </h2>
+                            <!-- ▼ TMP_ADDRESS_SWAP: 商標登録の早期審査要件対応のため登記住所を表示中 -->
+                            <div class="bg-surface rounded-xl p-6 text-sm text-muted leading-relaxed">
+                                〒252-0027<br>
+                                神奈川県座間市西栗原2-1-51
+                            </div>
+                            <!--
                             <div class="bg-surface rounded-xl p-6 text-sm text-muted leading-relaxed">
                                 〒243-0342<br>
                                 神奈川県海老名市中央1-16-31 A&NIビル06
                             </div>
+                            -->
+                            <!-- ▲ TMP_ADDRESS_SWAP -->
                         </div>
                         <div>
                             <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
                                 <i class="fa-solid fa-train text-primary"></i> 交通アクセス
                             </h2>
+                            <!-- ▼ TMP_ADDRESS_SWAP: 一時的に駅情報は非表示。海老名駅情報は登記住所表示中のためコメントアウト -->
+                            <p class="text-sm text-muted">交通アクセス情報は更新中です。詳しくは<a href="contact.html" class="text-primary underline">お問い合わせ</a>ください。</p>
+                            <!--
                             <ul class="space-y-3">
                                 <li class="flex items-start gap-3 text-sm text-muted">
                                     <i class="fa-solid fa-circle text-primary/40 text-[6px] mt-2 shrink-0"></i>
@@ -86,6 +97,8 @@
                                     小田急線「海老名駅」東口より徒歩5分
                                 </li>
                             </ul>
+                            -->
+                            <!-- ▲ TMP_ADDRESS_SWAP -->
                         </div>
                         <div class="mt-10 p-5 rounded-xl border border-primary/15 bg-primary/5">
                             <p class="text-sm font-bold text-body mb-1">
@@ -100,9 +113,16 @@
                         <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
                             <i class="fa-solid fa-map text-primary"></i> 地図
                         </h2>
+                        <!-- ▼ TMP_ADDRESS_SWAP: 登記住所(座間)に向けた地図に切替中 -->
+                        <div class="bg-surface rounded-2xl overflow-hidden border border-body/5">
+                            <iframe src="https://www.google.com/maps?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E5%BA%A7%E9%96%93%E5%B8%82%E8%A5%BF%E6%A0%97%E5%8E%9F2-1-51&z=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AileWell 所在地"></iframe>
+                        </div>
+                        <!--
                         <div class="bg-surface rounded-2xl overflow-hidden border border-body/5">
                             <iframe src="https://www.google.com/maps?q=35.45521,139.39515&z=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AileWell 所在地"></iframe>
                         </div>
+                        -->
+                        <!-- ▲ TMP_ADDRESS_SWAP -->
                     </div>
 
                 </div>

@@ -6,9 +6,15 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com https://www.google.co.jp; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Access | AileWell</title>
-    <meta name="description" content="Find directions and location information for AileWell's office in Ebina, Kanagawa, Japan.">
+    <!-- ▼ TMP_ADDRESS_SWAP: descriptions reference Kanagawa during registered-address display -->
+    <meta name="description" content="Find directions and location information for AileWell's office in Kanagawa, Japan.">
     <meta property="og:title" content="Access | AileWell">
+    <meta property="og:description" content="Find directions and location information for AileWell's office in Kanagawa, Japan.">
+    <!--
+    <meta name="description" content="Find directions and location information for AileWell's office in Ebina, Kanagawa, Japan.">
     <meta property="og:description" content="Find directions and location information for AileWell's office in Ebina, Kanagawa, Japan.">
+    -->
+    <!-- ▲ TMP_ADDRESS_SWAP -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ailewell.com/en/access.html">
     <meta property="og:image" content="https://ailewell.com/assets/images/light%20blue%20-%20mark.jpg">
@@ -63,15 +69,26 @@
                             <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
                                 <i class="fa-solid fa-location-dot text-primary"></i> Address
                             </h2>
+                            <!-- ▼ TMP_ADDRESS_SWAP: Showing registered address (登記住所) for trademark expedited examination -->
+                            <div class="bg-surface rounded-xl p-6 text-sm text-muted leading-relaxed">
+                                2-1-51 Nishi-Kurihara<br>
+                                Zama-shi, Kanagawa 252-0027, Japan
+                            </div>
+                            <!--
                             <div class="bg-surface rounded-xl p-6 text-sm text-muted leading-relaxed">
                                 A&NI Building 06<br>
                                 1-16-31 Chuo, Ebina-shi, Kanagawa 243-0342, Japan
                             </div>
+                            -->
+                            <!-- ▲ TMP_ADDRESS_SWAP -->
                         </div>
                         <div>
                             <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
                                 <i class="fa-solid fa-train text-primary"></i> Getting Here
                             </h2>
+                            <!-- ▼ TMP_ADDRESS_SWAP: Station details temporarily hidden during registered-address display -->
+                            <p class="text-sm text-muted">Transit details are being updated. Please <a href="contact.html" class="text-primary underline">contact us</a> for directions.</p>
+                            <!--
                             <ul class="space-y-3">
                                 <li class="flex items-start gap-3 text-sm text-muted">
                                     <i class="fa-solid fa-circle text-primary/40 text-[6px] mt-2 shrink-0"></i>
@@ -82,6 +99,8 @@
                                     5-minute walk from Odakyu Line Ebina Station (East Exit)
                                 </li>
                             </ul>
+                            -->
+                            <!-- ▲ TMP_ADDRESS_SWAP -->
                         </div>
                         <div class="mt-10 p-5 rounded-xl border border-primary/15 bg-primary/5">
                             <p class="text-sm font-bold text-body mb-1">
@@ -94,9 +113,16 @@
                         <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
                             <i class="fa-solid fa-map text-primary"></i> Map
                         </h2>
+                        <!-- ▼ TMP_ADDRESS_SWAP: Map switched to registered address (Zama) -->
+                        <div class="bg-surface rounded-2xl overflow-hidden border border-body/5">
+                            <iframe src="https://www.google.com/maps?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E5%BA%A7%E9%96%93%E5%B8%82%E8%A5%BF%E6%A0%97%E5%8E%9F2-1-51&z=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AileWell location"></iframe>
+                        </div>
+                        <!--
                         <div class="bg-surface rounded-2xl overflow-hidden border border-body/5">
                             <iframe src="https://www.google.com/maps?q=35.45521,139.39515&z=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AileWell location"></iframe>
                         </div>
+                        -->
+                        <!-- ▲ TMP_ADDRESS_SWAP -->
                     </div>
                 </div>
             </div>
