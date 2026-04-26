@@ -113,11 +113,19 @@
                         <h2 class="text-xl font-bold text-body mb-5 flex items-center gap-3">
                             <i class="fa-solid fa-map text-primary"></i> 地図
                         </h2>
-                        <!-- ▼ TMP_ADDRESS_SWAP: 登記住所(座間)に向けた地図に切替中 -->
+                        <!-- ▼ TMP_ADDRESS_SWAP: 地図は更新中のプレースホルダ表示。住所表記確定後にコメント内のいずれかをアンコメントして復帰 -->
+                        <div class="bg-surface rounded-2xl border border-body/5 flex items-center justify-center text-center px-6" style="min-height:450px;">
+                            <div>
+                                <i class="fa-solid fa-map-location-dot text-primary/40 text-4xl mb-4"></i>
+                                <p class="text-sm text-muted leading-relaxed">地図情報は更新中です。<br>詳しくは<a href="contact.html" class="text-primary underline">お問い合わせ</a>ください。</p>
+                            </div>
+                        </div>
+                        <!-- 登記住所(座間)版:
                         <div class="bg-surface rounded-2xl overflow-hidden border border-body/5">
                             <iframe src="https://www.google.com/maps?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E5%BA%A7%E9%96%93%E5%B8%82%E8%A5%BF%E6%A0%97%E5%8E%9F2-1-51&z=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AileWell 所在地"></iframe>
                         </div>
-                        <!--
+                        -->
+                        <!-- 旧住所(海老名)版:
                         <div class="bg-surface rounded-2xl overflow-hidden border border-body/5">
                             <iframe src="https://www.google.com/maps?q=35.45521,139.39515&z=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AileWell 所在地"></iframe>
                         </div>
